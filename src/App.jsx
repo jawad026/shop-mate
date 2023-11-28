@@ -1,15 +1,12 @@
 
 import "./App.css";
-import Chart from "./components/common/Chart/Chart";
-
 function App() {
   return (
     <>
-      <div>
-        <Chart />
-      </div>
+    <div>Run Smooth</div>
     </>
   );
 }
 
 export default App;
+
