@@ -1,0 +1,23 @@
+
+.Highlight {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fc1947;
+    position: absolute;
+    top: 0;
+    right: 11px;
+    bottom: inherit;
+    left: inherit;
+}
+
+.card-count {
+    color: #f6fbff;
+    position: absolute;
+    right: -39px;
+    top: 5px;
+    font-size: 97px;
+    -webkit-transform: rotate(-44deg);
+    transform: rotate(-44deg);
+}
