@@ -1,10 +1,13 @@
-import "./App.css";
 
+import "./App.css";
+import Chart from "./components/common/Chart/Chart";
 
 function App() {
   return (
     <>
-    <div>Run Smooth</div>
+      <div>
+        <Chart />
+      </div>
     </>
   );
 }
