@@ -7,7 +7,7 @@ function App() {
     <>
       {/* <Sidebar /> */}
       <div style={{height: '50px'}}>
-      {/* <InputBox height='20px' width='200px' label='Type Something'/> */}
+      <InputBox height='20px' width='200px' label='Type Something'/>
       </div>
     </>
   );

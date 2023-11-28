@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const InputBox = ({ id, label, disabled, required, height, width}) => {
+const InputBox = ({ id, label, disabled, required, height, width, onchange, register}) => {
   return (
     <div className="relative" style={{height:height, width:width}} >
       <input
@@ -10,7 +10,7 @@ const InputBox = ({ id, label, disabled, required, height, width}) => {
         text-gray-900 bg-transparent rounded-lg 
         focus:outline-none focus:ring-0 focus:border-blue-600 peer"
         placeholder=" "
-
+        onChange={onchange}
       />
       <label
         htmlFor="floating_outlined"
