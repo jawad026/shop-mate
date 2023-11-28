@@ -1,5 +1,3 @@
-import React from "react";
-
 const Card = () => {
   return (
     <div className="border-2 relative  p-5 rounded-md border-gray-300 overflow-hidden">
