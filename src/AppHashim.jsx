@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductSetup from './components/ProductSetup'
+import ProductSetup from './components/Tabs/ProductSetup'
 
 function HashimApp() {
   return (
