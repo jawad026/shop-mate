@@ -1,4 +1,3 @@
-
 function CheckOutButton(props) {
   return (
     <div>
