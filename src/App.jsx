@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 import Jawad from "./Jawad";
 function App() {
@@ -9,3 +11,4 @@ function App() {
 }
 
 export default App;
+>>>>>>> 12fdee6a1654d2bdcae9b4f72f39a2801bd00c67
