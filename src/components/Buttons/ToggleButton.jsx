@@ -4,10 +4,10 @@ function ToggleButton() {
   return (
     <>
       <div>
-        <label class="relative inline-flex items-center cursor-pointer">
-          <input type="checkbox" value="" class="sr-only peer" />
+        <label className="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" value="" className="sr-only peer" />
           <div
-            class="w-10 h-5
+            className="w-10 h-5
            bg-gray-200 peer-focus:outline-none
            rounded-full   peer-checked:after:translate-x-full
             rtl:peer-checked:after:-translate-x-full peer-checked:after:border-blue-700
