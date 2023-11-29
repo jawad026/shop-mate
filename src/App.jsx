@@ -1,15 +1,13 @@
+import Hashim from "./AppHashim";
 import React from 'react'
-import AppAli from "./AppAli"
 
 function App() {
   return (  
-
-
     <>
-    <AppAli/>
+      <Hashim/>
     </>
     
   )
 }
+export default App;
 
-export default App

@@ -1,10 +1,10 @@
-// import React from 'react'
-// import ProductSetup from './components/ProductSetup'
+import React from 'react'
+import ProductSetup from './components/Tabs/ProductSetup'
 
-// function HashimApp() {
-//   return (
-//     <div><ProductSetup/></div>
-//   )
-// }
+function HashimApp() {
+  return (
+    <div><ProductSetup/></div>
+  )
+}
 
-// export default HashimApp
+export default HashimApp
