@@ -1,9 +1,9 @@
 import React from 'react'
-import Login from './pages/Login/Login'
+import ProductSetup from './components/ProductSetup'
 
 function HashimApp() {
   return (
-    <div><Login/></div>
+    <div><ProductSetup/></div>
   )
 }
 
