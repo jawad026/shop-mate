@@ -1,14 +1,15 @@
-<<<<<<< HEAD
-=======
+import React from 'react'
+import AppAli from "./AppAli"
 
-import Jawad from "./Jawad";
 function App() {
-  return (
+  return (  
+
+
     <>
-      <Jawad/>
+    <AppAli/>
     </>
-  );
+    
+  )
 }
 
-export default App;
->>>>>>> 12fdee6a1654d2bdcae9b4f72f39a2801bd00c67
+export default App
