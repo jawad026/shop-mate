@@ -2,7 +2,7 @@ import Layout from "./pages/Layout";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Setting from "./pages/Setting/Setting";
-import Product from "./pages/Product/Product";
+import ProductPage from "./pages/ProductPage/ProductPage";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="/chatbot" element={<Setting />} />
-          <Route path="/order" element={<Product />} />
+          <Route path="/order" element={<ProductPage />} />
         </Route>
       </Routes>
     </>

@@ -1,12 +1,12 @@
 import React from 'react'
-import CustomSelection from './components/CustomSelection/CustomSelection'
+import ProductPage from './pages/ProductPage/ProductPage'
 
 function HashimApp() {
 
   return (
     <div>
 
-        <CustomSelection/>
+        <ProductPage/>
       
     </div>
   )

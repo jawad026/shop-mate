@@ -99,7 +99,6 @@ const CustomSelection = () => {
       {
         rec.map((d, i) => (
           <div key={i} className='flex justify-center items-center'>
-          {/* <div className=' mr-3'> <CheckBox/> </div>  */}
           <div><Product/></div>
         </div>
         ))
