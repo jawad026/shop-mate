@@ -57,7 +57,7 @@ const Sidebar = () => {
             <div>Dashboard</div>
           </div>
         </NavLink>
-        <NavLink to={"/chatbot"}>
+        <NavLink to={"chatbot"}>
           <div className="p-5 flex flex-col items-center active:text-blue-500 hover:text-blue-500">
             <div className="icon">
               <IoMdSettings size={32} />
