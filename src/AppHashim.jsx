@@ -1,9 +1,14 @@
 import React from 'react'
-import ProductSetup from './components/Tabs/ProductSetup'
+import CustomSelection from './components/CustomSelection/CustomSelection'
 
 function HashimApp() {
+
   return (
-    <div><ProductSetup/></div>
+    <div>
+
+        <CustomSelection/>
+      
+    </div>
   )
 }
 
