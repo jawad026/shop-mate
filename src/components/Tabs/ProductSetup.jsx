@@ -1,4 +1,3 @@
-import React from "react";
 import CheckOutButton from "../Buttons/CheckOutButton";
 import SimpleButton from "../Buttons/SimpleButton";
 import RadioButton from "../Buttons/RadioButton";
