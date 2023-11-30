@@ -4,12 +4,12 @@ import InputBox from "../common/InputBox/InputBox";
 
 const BasicSetup = () => {
   return (
-    <div className="w-screen px-5">
+    <div className=" px-5">
       <div className="flex px-4 gap-3 justify-end py-6">
         <SimpleButton />
-        <CheckOutButton />
+        <CheckOutButton text={'Save Changes'} />
       </div>
-      <div className="border-spacing-1 border-2 rounded-md p-4 mb-10 shadow-sm">
+      <div className="border-spacing-1 border-2 rounded-md p-4 mb-10 shadow-sm text-start">
         <div className="pb-4">
           <InputBox label={"BotName"} />
           <p className="text-gray-600 text-sm">
@@ -22,7 +22,7 @@ const BasicSetup = () => {
           important things here and bot will learn it with high priority
         </p>
       </div>
-      <div className="border-spacing-1 border-2 rounded-md p-4 shadow-sm">
+      <div className="border-spacing-1 border-2 rounded-md p-4 shadow-sm text-start">
         <div className="pb-4">
           <InputBox label={"Discount"} />
           <p className="text-gray-600 text-sm">

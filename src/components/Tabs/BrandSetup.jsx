@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import CheckOutButton from "../Buttons/CheckOutButton";
 import SimpleButton from "../Buttons/SimpleButton";
 import ToggleButton from "../Buttons/ToggleButton";
@@ -6,10 +7,10 @@ import SelectBox from "../common/SelectBox/SelectBox";
 import { PiRobotFill } from "react-icons/pi";
 const BrandSetup = () => {
   return (
-    <div className="px-5">
+    <div className="px-5 text-gray-600">
       <div className="flex px-4 gap-3 justify-end py-6">
         <SimpleButton />
-        <CheckOutButton />
+        <CheckOutButton text={'Save Changes'} />
       </div>
       <div className="border-spacing-1 border-2 rounded-md p-4 mb-10 shadow-sm">
         <div className="pb-4">

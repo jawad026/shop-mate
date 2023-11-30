@@ -1,7 +1,11 @@
+import SettingTabs from "../../components/Tabs/Tabs";
+
 const Setting = () => {
   return (
-    <div>Setting</div>
-  )
-}
+    <div>
+      <SettingTabs />
+    </div>
+  );
+};
 
-export default Setting
+export default Setting;
