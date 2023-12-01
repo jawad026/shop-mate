@@ -1,4 +1,5 @@
-function SimpleButton(onClick, type, text) {
+/* eslint-disable react/prop-types */
+function SimpleButton({ onClick, type, text }) {
   return (
     <div>
       <button
@@ -12,4 +13,4 @@ function SimpleButton(onClick, type, text) {
   );
 }
 
-export default SimpleButton;  
+export default SimpleButton;

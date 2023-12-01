@@ -1,32 +1,31 @@
 import Chart from "../../components/common/Chart/Chart";
-import SelectBox from "../../components/common/SelectBox/SelectBox";
 import TokenUage from "../../components/TokenUsage/TokenUsage";
 import Card from "../../components/Card/Card";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="px-5 overflow-hidden">
       {/* overview */}
-
-      <div className=" text-4xl">Overview</div>
-      <div className="grid grid-col-4 gap-3 grid-flow-col">
-
-        <Card title={'Lead'} count={'1'} index={'01'} />
-        <Card title={'Visitors'} count={'0'} index={'02'} />
-        <Card title={'Conversations'} count={'0'} index={'03'} />
-        <Card  title={'Messages'} count={'0'} index={'04'}/>
+      <div className="py-10">
+        <div className=" text-4xl font-medium py-6">Overview</div>
+        <div className="grid grid-col-1  md:grid-col-4 gap-3 md:grid-flow-col">
+          <Card title={"Lead"} count={"1"} index={"01"} />
+          <Card title={"Visitors"} count={"0"} index={"02"} />
+          <Card title={"Conversations"} count={"0"} index={"03"} />
+          <Card title={"Messages"} count={"0"} index={"04"} />
+        </div>
       </div>
 
       {/* graph */}
 
-      <div>
+      <div className=" py-5 border-2 px-4 rounded-md overflow-x-auto">
         <Chart />
       </div>
 
       {/* token Range */}
 
-      <div>
-        <TokenUage />
+      <div className="w-full">
+        <TokenUage progress={70} totalTokens={"100K"} />
       </div>
     </div>
   );

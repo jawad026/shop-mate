@@ -4,9 +4,9 @@ import InputBox from "../common/InputBox/InputBox";
 
 const BasicSetup = () => {
   return (
-    <div className=" px-5">
+    <div className="">
       <div className="flex px-4 gap-3 justify-end py-6">
-        <SimpleButton />
+        <SimpleButton text={'Reset'} />
         <CheckOutButton text={'Save Changes'} />
       </div>
       <div className="border-spacing-1 border-2 rounded-md p-4 mb-10 shadow-sm text-start">
