@@ -35,14 +35,14 @@ const Chart = () => {
     <>
       {" "}
 
-      {/* <div className="border-2  "> */}
+      <div className="border-2 mt-12 ">
 
       <h3 className="text-2xl   font-bold">Last 7 days conversations</h3>
-      <div className="flex justify-center  mt-6 ">
+      <div className="flex justify-center  mt-10 ">
         <Line data={data} />
       </div>
 
-      {/* </div> */}
+      </div>
       
     </>
   );
