@@ -11,14 +11,7 @@ const initialValues = {
 };
 
 const BasicSetup = () => {
-
-  // const handleCancel = (event, values) => {
-  //   event.preventDefault();
-  //   // values.botName = "";
-    
-  //   // values.botName = "";
-  // }
- 
+   
   const submitForm = async (values) => {
     //   await axios.post("/api", {
     //     botName: values.botName,
