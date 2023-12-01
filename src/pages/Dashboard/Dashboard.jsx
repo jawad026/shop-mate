@@ -9,8 +9,12 @@ const Dashboard = () => {
       {/* overview */}
 
       <div className=" text-4xl">Overview</div>
-      <div>
-        <Card />
+      <div className="grid grid-col-4 gap-3 grid-flow-col">
+
+        <Card title={'Lead'} count={'1'} index={'01'} />
+        <Card title={'Visitors'} count={'0'} index={'02'} />
+        <Card title={'Conversations'} count={'0'} index={'03'} />
+        <Card  title={'Messages'} count={'0'} index={'04'}/>
       </div>
 
       {/* graph */}

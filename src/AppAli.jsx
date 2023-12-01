@@ -19,7 +19,7 @@ function App() {
       <ToggleButton />
       <CheckBox /> */}
 {/* <Product/> */}
-  <AutoProductSelection/>
+  {/* <AutoProductSelection/> */}
 {/* <RadioButton/> */}
 
     </>
