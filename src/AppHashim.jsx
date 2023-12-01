@@ -1,12 +1,12 @@
 import React from 'react'
-import ProductPage from './pages/ProductPage/ProductPage'
+import Chart from './components/common/Chart/Chart'
 
 function HashimApp() {
 
   return (
     <div>
 
-        <ProductPage/>
+        <Chart/>
       
     </div>
   )

@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 
-const InputBox = ({ id, label, disabled, required, height, width, onchange, register}) => {
+const InputBox = ({label, disabled, required, onchange, name, value}) => {
   return (
-    <div className="relative" style={{height:height, width:width}} >
+    <div className="relative" >
       <input
         type="text"
+        name={name}
+        value={value}
         id="floating_outlined"
         className="border-[2px] border-gray block px-2.5 pb-2.5 pt-4 w-full text-sm 
         text-gray-900 bg-transparent rounded-lg 
         focus:outline-none focus:ring-0 focus:border-blue-600 peer"
         placeholder=" "
         onChange={onchange}
+        disabled = {disabled ? disabled : false}
+        required = {required ? required : true}
       />
       <label
         htmlFor="floating_outlined"
