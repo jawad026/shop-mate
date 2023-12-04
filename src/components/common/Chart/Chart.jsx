@@ -34,26 +34,16 @@ const Chart = () => {
   return (
     <>
       {" "}
-      {/* <div className="border-2  "> */}
-      {/* <h3 className="text-2xl   font-bold">Last 7 days conversations</h3>
+      <h3 className="text-2xl   font-bold">Last 7 days conversations</h3>
+
       <div className="flex justify-center  mt-6 w-[1280px] h-[230px] ">
         <Line
           data={data}
           width={"100%"}
           options={{ maintainAspectRatio: false }}
         />
-      </div> */}
-      {/* </div> */}
-
-      <div className="border-2 mt-12 ">
-
-      <h3 className="text-2xl   font-bold">Last 7 days conversations</h3>
-      <div className="flex justify-center  mt-10 ">
-        <Line data={data} />
+      </div> 
       </div>
-
-      </div>
-      
     </>
   );
 };

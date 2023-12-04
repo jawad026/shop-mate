@@ -37,9 +37,6 @@ const BrandSetup = () => {
 
 
   return (
-    <div className=" text-gray-600">
-      <div className="flex px-4 gap-3 justify-end py-6">
-        <div className="px-5 text-gray-600">
       <Formik
         initialValues={initialValues}
         onSubmit={(values) => {
@@ -64,13 +61,10 @@ const BrandSetup = () => {
           />
         </div>
       </div>
-
-
       <div className="border-spacing-1 mb-4 grid grid-cols-2 gap-40 border-2 rounded-md p-4 shadow-sm">
         <div>
           <div className="pb-4">
             <h3 className="text-2xl py-3 font-semibold">Brand</h3>
-
             <div className="Image">
               <h3 className="py-3 text-lg font-semibold relative">Logo</h3>
               <div className="border-[1px] border-gray-300 border-dashed flex items-center p-4 flex-col">

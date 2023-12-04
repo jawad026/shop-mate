@@ -25,6 +25,7 @@ const Dashboard = () => {
       {/* token Range */}
 
       <div className="w-full">
+
         <TokenUage progress={70} totalTokens = {1000}/>
       </div>
     </div>

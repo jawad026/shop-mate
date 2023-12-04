@@ -24,7 +24,9 @@ const BasicSetup = () => {
   }
 
   return (
+
     <div className="">
+
     <div className=" px-5">
       <Formik
         initialValues={initialValues}

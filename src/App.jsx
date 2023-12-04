@@ -9,18 +9,13 @@ import './App.css'
 function App() {
   return (
     <>
-      <Routes>
+       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="/chatbot" element={<Setting />} />
           <Route path="/order" element={<ProductPage />} />
         </Route>
       </Routes>
-{/* <AppAli/> */}
-
-
-      
-
     </>
   );
 }
