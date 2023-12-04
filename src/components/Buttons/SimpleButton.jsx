@@ -1,10 +1,9 @@
-<<<<<<< HEAD
+
 /* eslint-disable react/prop-types */
+
 function SimpleButton({ onClick, type, text }) {
-=======
 
 function SimpleButton({type, onClick, text}) {
->>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
   return (
     <div>
       <button 

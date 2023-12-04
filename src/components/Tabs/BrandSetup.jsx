@@ -37,13 +37,6 @@ const BrandSetup = () => {
 
 
   return (
-<<<<<<< HEAD
-    <div className=" text-gray-600">
-      <div className="flex px-4 gap-3 justify-end py-6">
-        <SimpleButton text={"Reset"} />
-        <CheckOutButton text={"Save Changes"} />
-=======
-    <div className="px-5 text-gray-600">
       <Formik
         initialValues={initialValues}
         onSubmit={(values) => {
@@ -54,7 +47,6 @@ const BrandSetup = () => {
       <div className="flex px-4 gap-3 justify-end py-6">
         <SimpleButton text={'Reset'} type='button'/>
         <CheckOutButton type="submit" text={'Save Changes'} />
->>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
       </div>
 
       <div className="border-spacing-1 border-2 rounded-md p-4 mb-10 shadow-sm">
@@ -69,13 +61,7 @@ const BrandSetup = () => {
           />
         </div>
       </div>
-<<<<<<< HEAD
-      <div className="border-spacing-1 mb-4 grid md:grid-cols-2 gap-40 border-2 rounded-md p-4 shadow-sm">
-=======
-
-
       <div className="border-spacing-1 mb-4 grid grid-cols-2 gap-40 border-2 rounded-md p-4 shadow-sm">
->>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
         <div>
           <div className="pb-4">
             <h3 className="text-2xl py-3 font-semibold">Brand</h3>
@@ -207,8 +193,8 @@ const BrandSetup = () => {
         <div className="md:block hidden">
           <div className="rounded-full border-2 flex w-2/3 justify-between ps-5 pe-1 py-2 shadow-lg mt-32">
             <div>
-              <h1 className="text-black font-semibold">👋Need Help?</h1>
-              <h5 className="text-sm">Click here and start chatting with us</h5>
+              <h1>{values.calloutTitle}</h1>
+              <h5 className="text-sm">{values.calloutMessage}</h5>
             </div>
 
             <div className="rounded-full bg-blue-500 p-3">
@@ -233,8 +219,7 @@ const BrandSetup = () => {
                     <PiRobotFill color="white" />
                   </div>
                   <div className="px-4 pb-5 pt-3 rounded-md bg-gray-200">
-                    Hi there 👋
-                    <br /> How can I help you today?
+                    {values.greetings}
                   </div>
                 </div>
               </div>
@@ -247,84 +232,11 @@ const BrandSetup = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
 </form>
 )}
       </Formik>
->>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
-
-      {/* <div className="border-spacing-1 mb-4 grid grid-cols-1 gap-3 border-2 rounded-md p-4 shadow-sm">
-        <div>
-          <div className="pb-4">
-            <h3 className="text-2xl py-3 font-semibold">Function Button</h3>
-            <div className="Callout ">
-              <div className="flex justify-between w-1/2 items-center">
-                <h3 className="py-3 text-lg font-semibold relative">
-                  Shop name
-                </h3>
-                <ToggleButton />
-              </div>
-              <div className="text-gray-600 text-sm">
-                When customer click “Shop Now”, our chatbot will provide
-                recommendations for 10 products, and customers can view product
-                images and prices for purchase.This is one of the buttons with
-                the highest click-through rates. If you don’t want this function
-                button showed up, you can turn it off.
-              </div>
-              <div className="flex gap-4 flex-col">
-                <div>
-                  <InputBox label={"BUtton Text"} />
-                </div>
-              </div>
-            </div>
-            <hr className="py-4" />
-            <div className="Color ">
-              <div className="flex justify-between w-1/2 items-center">
-                <h3 className="py-3 text-lg font-semibold relative">
-                  Need Help
-                </h3>
-                <ToggleButton />
-              </div>
-              <div className="text-gray-600 text-sm">
-                When customer click “Need Help”, our chatbot will ask customers
-                to fill in their email address. Once filled, we will send the
-                customer's chat logs to the customer service supervisor's email
-                address provided in the basic setup. If customers click this
-                button, it means that the chatbot is unable to handle the
-                request temporarily and human intervention is required. If you
-                don’t want this function button showed up, you can turn it off.
-              </div>
-              <div className="flex gap-4 flex-col">
-                <div>
-                  <InputBox label={"Color"} type={"color"} />
-                </div>
-                <div>
-                  <InputBox label={"Greetings"} />
-                  <p className="text-gray-600 text-sm">
-                    Greetings will be the first message when customer click
-                    bot,you can add some emoji 😊 to make greetings better
-                  </p>
-                </div>
-                <div>
-                  <InputBox label={"Button text"} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
+    </div>
+    </div>
     </div>
   );
 };
