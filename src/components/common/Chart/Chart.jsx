@@ -34,6 +34,7 @@ const Chart = () => {
   return (
     <>
       {" "}
+<<<<<<< HEAD
       {/* <div className="border-2  "> */}
       <h3 className="text-2xl   font-bold">Last 7 days conversations</h3>
       <div className="flex justify-center  mt-6 w-[1280px] h-[230px] ">
@@ -44,6 +45,18 @@ const Chart = () => {
         />
       </div>
       {/* </div> */}
+=======
+
+      <div className="border-2 mt-12 ">
+
+      <h3 className="text-2xl   font-bold">Last 7 days conversations</h3>
+      <div className="flex justify-center  mt-10 ">
+        <Line data={data} />
+      </div>
+
+      </div>
+      
+>>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
     </>
   );
 };

@@ -1,11 +1,11 @@
 import React from "react";
 
-function ToggleButton() {
+function ToggleButton({checked, value, onChange}) {
   return (
     <>
       <div>
         <label className="relative inline-flex items-center cursor-pointer">
-          <input type="checkbox" value="" className="sr-only peer" />
+          <input onChange={onChange} type="checkbox" checked={checked} value={value} className="sr-only peer" />
           <div
             className="w-10 h-5
            bg-gray-200 peer-focus:outline-none

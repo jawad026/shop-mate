@@ -5,23 +5,77 @@ import ToggleButton from "../Buttons/ToggleButton";
 import InputBox from "../common/InputBox/InputBox";
 import SelectBox from "../common/SelectBox/SelectBox";
 import { PiRobotFill } from "react-icons/pi";
+import { Formik } from "formik";
+
+const initialValues = {
+  positionButton: '',
+  calloutTitle: "👋Need Help?",
+  calloutMessage: "Click here and start chatting with us",
+  calloutToggle: false,
+  colorToggle: false,
+  color: "#8d3d80",
+  greetings: "Hi there 👋How can I help you today?",
+  shopName: "",
+};
+
 const BrandSetup = () => {
+
+  const submitForm = async (values) => {
+    //   await axios.post("/api", {
+    //     positionButton: values.positionButton,
+    //     calloutTitle: values.calloutTitle,
+    //     calloutMessage: values.calloutMessage,
+    //     calloutToggle: values.calloutToggle,
+    //     colorToggle: values.colorToggle,
+    //     color: values.color,
+    //     greetings: values.greetings,
+    //     shopName: values.shopName,
+    // })
+    // .then((res) => console.log("Basic Page Submission done"));
+    console.log("Values:",values)
+  }
+
+
   return (
+<<<<<<< HEAD
     <div className=" text-gray-600">
       <div className="flex px-4 gap-3 justify-end py-6">
         <SimpleButton text={"Reset"} />
         <CheckOutButton text={"Save Changes"} />
+=======
+    <div className="px-5 text-gray-600">
+      <Formik
+        initialValues={initialValues}
+        onSubmit={(values) => {
+          submitForm(values);
+      }}>
+{({ values, errors, handleBlur, handleChange, handleSubmit,resetForm }) => (
+  <form onSubmit={handleSubmit}>
+      <div className="flex px-4 gap-3 justify-end py-6">
+        <SimpleButton text={'Reset'} type='button'/>
+        <CheckOutButton type="submit" text={'Save Changes'} />
+>>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
       </div>
+
       <div className="border-spacing-1 border-2 rounded-md p-4 mb-10 shadow-sm">
         <div className="pb-4">
           <h3 className="text-2xl py-3 font-semibold">Button</h3>
           <SelectBox
+            value = {values.positionButton}
+            onChange={handleChange}
+            name="positionButton"
             options={["Bottom right", "Bottom left"]}
             label={"Position"}
           />
         </div>
       </div>
+<<<<<<< HEAD
       <div className="border-spacing-1 mb-4 grid md:grid-cols-2 gap-40 border-2 rounded-md p-4 shadow-sm">
+=======
+
+
+      <div className="border-spacing-1 mb-4 grid grid-cols-2 gap-40 border-2 rounded-md p-4 shadow-sm">
+>>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
         <div>
           <div className="pb-4">
             <h3 className="text-2xl py-3 font-semibold">Brand</h3>
@@ -47,14 +101,26 @@ const BrandSetup = () => {
             <div className="Callout ">
               <div className="flex justify-between items-center">
                 <h3 className="py-3 text-lg font-semibold relative">Callout</h3>
-                <ToggleButton />
+                <ToggleButton
+                value={values.calloutToggle}
+                onChange={()=>values.calloutToggle =! values.calloutToggle}
+                name={"calloutToggle"} 
+                />
               </div>
               <div className="flex gap-4 flex-col">
                 <div>
-                  <InputBox label={"Title"} />
+                  <InputBox label={"Title"} 
+                    value={values.calloutTitle}
+                    onchange={handleChange}
+                    name={"calloutTitle"} 
+                  />
                 </div>
                 <div>
-                  <InputBox label={"Message"} />
+                  <InputBox label={"Message"} 
+                  value={values.calloutMessage}
+                  onchange={handleChange}
+                  name={"calloutMessage"}
+                  />
                 </div>
               </div>
               <div className="md:hidden rounded-full border-2 flex  justify-between ps-5 pe-1 py-2 shadow-lg mt-3">
@@ -81,22 +147,37 @@ const BrandSetup = () => {
             <hr className="py-4" />
             <div className="Color ">
               <div className="flex justify-between items-center">
-                <h3 className="py-3 text-lg font-semibold relative">Callout</h3>
-                <ToggleButton />
+                <h3 className="py-3 text-lg font-semibold relative">Color</h3>
+                <ToggleButton 
+                  value={values.colorToggle}
+                  onChange={()=>values.colorToggle =! values.colorToggle}
+                  name={"colorToggle"} />
               </div>
               <div className="flex gap-4 flex-col">
                 <div>
-                  <InputBox label={"Color"} type={"color"} />
+                  <InputBox label={"Color"} type={"color"} 
+                  value={values.color}
+                  onchange={handleChange}
+                  name={"color"}
+                  />
                 </div>
                 <div>
-                  <InputBox label={"Greetings"} />
+                  <InputBox label={"Greetings"} 
+                  value={values.greetings}
+                  onchange={handleChange}
+                  name={"greetings"} 
+                  />
                   <p className="text-gray-600 text-sm">
                     Greetings will be the first message when customer click
                     bot,you can add some emoji 😊 to make greetings better
                   </p>
                 </div>
                 <div>
-                  <InputBox label={"Shop Name"} />
+                  <InputBox label={"Shop Name"} 
+                  value={values.shopName}
+                  onchange={handleChange}
+                  name={"shopName"} 
+                  />
                 </div>
               </div>
               <div className="md:hidden block mt-3">
@@ -166,12 +247,18 @@ const BrandSetup = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+</form>
+)}
+      </Formik>
+>>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
 
       {/* <div className="border-spacing-1 mb-4 grid grid-cols-1 gap-3 border-2 rounded-md p-4 shadow-sm">
         <div>
@@ -233,6 +320,11 @@ const BrandSetup = () => {
           </div>
         </div>
       </div> */}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
     </div>
   );
 };
