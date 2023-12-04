@@ -1,4 +1,3 @@
-
 import AutoProductSelection from "./components/Auto Product Selection/AutoProductSelection";
 import CheckBox from "./components/Buttons/CheckBox";
 import CheckOutButton from "./components/Buttons/CheckOutButton";
@@ -12,24 +11,20 @@ import Sidebar from "./components/Sidebar/Sidebar";
 function AppAli() {
   return (
     <>
-
       {/* <Sidebar /> */}
 
       {/* <CheckOutButton />
       <SimpleButton />
       <ToggleButton />
       <CheckBox /> */}
-{/* <Product/> */}
-  {/* <AutoProductSelection/> */}
-{/* <RadioButton/> */}
+      {/* <Product/> */}
+      
+      {/* <AutoProductSelection/> */}
+      {/* <RadioButton/> */}
 
-
-<MemberShip/>
-
+      <MemberShip />
     </>
-    
   );
 }
 
 export default AppAli;
-
