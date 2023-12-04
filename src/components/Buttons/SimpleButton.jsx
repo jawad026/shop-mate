@@ -1,3 +1,4 @@
+
 function SimpleButton({type, onClick, text}) {
   return (
     <div>
@@ -12,4 +13,4 @@ function SimpleButton({type, onClick, text}) {
   );
 }
 
-export default SimpleButton;
+export default SimpleButton;  
