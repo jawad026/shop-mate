@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function SimpleButton({type, onClick, text}) {
   return (
     <div>

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import AutoProductSelection from "../../components/Auto Product Selection/AutoProductSelection";
-import CustomSelection from '../../components/CustomSelection/CustomSelection'
+import CustomSelection from "../../components/CustomSelection/CustomSelection";
 import InputBox from "../../components/common/InputBox/InputBox";
 import { CiSearch } from "react-icons/ci";
 
@@ -35,38 +35,46 @@ const ProductPage = () => {
 
   return (
     <>
-    <h1 className="text-[36px]">Orders</h1>
-    <div className="pt-3 mb-5">
-    <InputBox width='30rem' label={<div className="flex justify-start text-center"><CiSearch/>&nbsp;&nbsp; Search by Product</div> }/>
-    </div>
-    <div className="shadow-xl border border-color: black-800 text-sm font-medium text-start  text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
-      <ul className="flex flex-wrap -mb-px">
-        <Tab
-          label="Auto Product Selection"
-          active={activeTab === "tab1"}
-          onClick={() => handleTabClick("tab1")}
+      <h1 className="text-[36px]">Orders</h1>
+      <div className="pt-3 mb-5 z-0">
+        <InputBox
+          width="30rem"
+          label={
+            <div className="flex justify-start text-center">
+              <CiSearch />
+              &nbsp;&nbsp; Search by Product
+            </div>
+          }
         />
-        <Tab
-          label="Custom Product Selection"
-          active={activeTab === "tab2"}
-          onClick={() => handleTabClick("tab2")}
-        />
-      </ul>
-
-      {/* Tab Content */}
-      <div className="mt-4">
-        {activeTab === "tab1" && (
-          <div>
-            <AutoProductSelection />
-          </div>
-        )}
-        {activeTab === "tab2" && (
-          <div>
-            <CustomSelection />
-          </div>
-        )}
       </div>
-    </div>
+      <div className="shadow-xl border border-color: black-800 text-sm font-medium text-start  text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+        <ul className="flex flex-wrap -mb-px">
+          <Tab
+            label="Auto Product Selection"
+            active={activeTab === "tab1"}
+            onClick={() => handleTabClick("tab1")}
+          />
+          <Tab
+            label="Custom Product Selection"
+            active={activeTab === "tab2"}
+            onClick={() => handleTabClick("tab2")}
+          />
+        </ul>
+
+        {/* Tab Content */}
+        <div className="mt-4">
+          {activeTab === "tab1" && (
+            <div>
+              <AutoProductSelection />
+            </div>
+          )}
+          {activeTab === "tab2" && (
+            <div>
+              <CustomSelection />
+            </div>
+          )}
+        </div>
+      </div>
     </>
   );
 };

@@ -3,7 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Setting from "./pages/Setting/Setting";
 import ProductPage from "./pages/ProductPage/ProductPage";
+import AppAli from "./AppAli";
 
+import './App.css'
 function App() {
   return (
     <>
@@ -14,6 +16,11 @@ function App() {
           <Route path="/order" element={<ProductPage />} />
         </Route>
       </Routes>
+{/* <AppAli/> */}
+
+
+      
+
     </>
   );
 }

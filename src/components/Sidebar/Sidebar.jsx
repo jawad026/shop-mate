@@ -2,10 +2,10 @@ import { MdDashboard } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 import { FaBoxArchive } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
-const Sidebar = () => {
+const Sidebar = ({ isOpen, closeDrawer }) => {
   return (
     <div className="w-28 h-screen  bg-white-500 shadow-md ">
-      <div className="flex flex-col gap-3 items-center">
+      <div className="flex flex-col gap-3 items-center text-sm">
         <NavLink to={"/"}>
           <div className="p-5 flex flex-col items-center mt-2">
             <div className="icon">
@@ -46,31 +46,31 @@ const Sidebar = () => {
                 ></path>
               </svg>
             </div>
-            <div className="">Carecart</div>
+            <div className="">CareCart</div>
           </div>
         </NavLink>
         <NavLink to={"/"}>
-          <div className="p-5 flex flex-col items-center active:text-blue-500 hover:text-blue-500">
+          <div className="p-5 flex flex-col items-center active:text-blue-500 hover:text-blue-500 gap-2">
             <div className="icon">
               <MdDashboard size={32} />
             </div>
-            <div>Dashboard</div>
+            <div>DASHBOARD</div>
           </div>
         </NavLink>
         <NavLink to={"chatbot"}>
-          <div className="p-5 flex flex-col items-center active:text-blue-500 hover:text-blue-500">
+          <div className="p-5 flex flex-col items-center active:text-blue-500 hover:text-blue-500 gap-2">
             <div className="icon">
               <IoMdSettings size={32} />
             </div>
-            <div className="">Setting</div>
+            <div className="">SETTING</div>
           </div>
         </NavLink>
         <NavLink to={"/order"}>
-          <div className="p-5 flex flex-col items-center active:text-blue-500 hover:text-blue-500">
+          <div className="p-5 flex flex-col items-center active:text-blue-500 hover:text-blue-500 gap-2">
             <div className="icon">
               <FaBoxArchive size={32} />
             </div>
-            <div className="">Product</div>
+            <div className="">PRODUCT</div>
           </div>
         </NavLink>
       </div>

@@ -6,10 +6,8 @@ const ProductSetup = () => {
   return (
     <div>
       <div className="flex justify-end">
-        <div className=" mr-2">
-          <SimpleButton />
-        </div>
-        <div className="mr-2">
+        <div className="flex px-4 gap-3 justify-end py-6">
+          <SimpleButton text={"Reset"} />
           <CheckOutButton text={"Save Changes"} />
         </div>
       </div>
@@ -34,7 +32,8 @@ const ProductSetup = () => {
           </p>
         </div>
         <p className="font-normal text-[#7B7B7B] dark:text-gray-400 pl-4 mb-4">
-          our chat bot will learn all products as recommended products. (Product limit:500)
+          our chat bot will learn all products as recommended products. (Product
+          limit:500)
         </p>
 
         <div className="flex">
@@ -44,7 +43,8 @@ const ProductSetup = () => {
           </p>
         </div>
         <p className="font-normal text-[#7B7B7B] dark:text-gray-400 pl-4 mb-4">
-          if you want to recommend more than (Product limit:500) products, email us heicarbook@gmail.com for help
+          if you want to recommend more than (Product limit:500) products, email
+          us heicarbook@gmail.com for help
         </p>
       </div>
     </div>
