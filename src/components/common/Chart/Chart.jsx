@@ -43,7 +43,6 @@ const Chart = () => {
           options={{ maintainAspectRatio: false }}
         />
       </div> 
-      </div>
     </>
   );
 };
