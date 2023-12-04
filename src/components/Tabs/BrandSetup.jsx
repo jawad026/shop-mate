@@ -156,8 +156,8 @@ const BrandSetup = () => {
         <div>
           <div className="rounded-full border-2 flex w-1/2 justify-between ps-5 pe-1 shadow-lg mt-32">
             <div>
-              <h1>👋Need Help?</h1>
-              <h5 className="text-sm">Click here and start chatting with us</h5>
+              <h1>{values.calloutTitle}</h1>
+              <h5 className="text-sm">{values.calloutMessage}</h5>
             </div>
 
             <div className="rounded-full bg-blue-500 p-3">
@@ -182,8 +182,8 @@ const BrandSetup = () => {
                     <PiRobotFill color="white" />
                   </div>
                   <div className="px-4 pb-5 pt-3 rounded-md bg-gray-200">
-                    Hi there 👋
-                    <br /> How can I help you today?
+                    {values.greetings}
+
                   </div>
                 </div>
               </div>
