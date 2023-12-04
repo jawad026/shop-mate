@@ -34,7 +34,7 @@ const SettingTabs = () => {
 
   return (
     <div className="text-sm font-medium text-start  text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
-      <ul className="flex flex-wrap -mb-px">
+      <ul className="flex flex-wrap -mb-px border-b-[1px] border-gray-400">
         <Tab
           label="Basic Setup"
           active={activeTab === "tab1"}
@@ -53,7 +53,7 @@ const SettingTabs = () => {
       </ul>
 
       {/* Tab Content */}
-      <div className="mt-4">
+      <div className="mt-1">
         {activeTab === "tab1" && (
           <div>
             <BasicSetup />

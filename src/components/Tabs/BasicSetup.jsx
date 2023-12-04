@@ -24,6 +24,33 @@ const BasicSetup = () => {
   }
 
   return (
+<<<<<<< HEAD
+    <div className="">
+      <div className="flex px-4 gap-3 justify-end py-6">
+        <SimpleButton text={'Reset'} />
+        <CheckOutButton text={'Save Changes'} />
+      </div>
+      <div className="border-spacing-1 border-2 rounded-md p-4 mb-10 shadow-sm text-start">
+        <div className="pb-4">
+          <InputBox label={"BotName"} />
+          <p className="text-gray-600 text-sm">
+            This section gives you Give a name to bot and your customer will
+          </p>
+        </div>
+        <InputBox label={"Store Introduction"} />
+        <p className="text-gray-600 text-sm">
+          Our bot will automatically learn your store policy,so add most
+          important things here and bot will learn it with high priority
+        </p>
+      </div>
+      <div className="border-spacing-1 border-2 rounded-md p-4 shadow-sm text-start">
+        <div className="pb-4">
+          <InputBox label={"Discount"} />
+          <p className="text-gray-600 text-sm">
+            If customer intends to buy, our bot will provide a discount code to
+            encourage placing an order.
+          </p>
+=======
     <div className=" px-5">
       <Formik
         initialValues={initialValues}
@@ -36,6 +63,7 @@ const BasicSetup = () => {
             <div className="flex px-4 gap-3 justify-end py-6">
               <div onClick={resetForm}>
           <SimpleButton text={'Reset'} type='button' />
+>>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
         </div>
               <CheckOutButton type="submit" text={"Save Changes"} />
             </div>

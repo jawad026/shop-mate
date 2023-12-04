@@ -1,22 +1,39 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Topbar from "../components/Topbar/Topbar";
+import { useState } from "react";
+import MobileSidebar from "../components/Sidebar/MobileSidebar";
 
 const Layout = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const openDrawer = () => {
+    setIsDrawerOpen(true);
+  };
+
+  const closeDrawer = () => {
+    setIsDrawerOpen(false);
+  };
+  console.log(isDrawerOpen);
   return (
-    <div className="flex">
+    <div className="flex overflow-hidden">
       {/* Sidebar */}
-      <div className="">
+      <div className="fixed h-full z-10 hidden md:block">
         <Sidebar />
+      </div>
+      <div className="fixed h-full z-10 block md:hidden">
+        <MobileSidebar isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer} />
       </div>
 
       {/* Main Content Area */}
-      <div className="w-screen">
+      <div className="w-screen md:ml-5">
         {/* Topbar */}
-        <Topbar />
+        <div className="fixed z-0  w-full">
+          <Topbar set={openDrawer} />
+        </div>
 
         {/* Other Components */}
-        <div className="mx-5">
+        <div className="md:ml-[6rem] mx-5 overflow-auto">
           <Outlet />
         </div>
       </div>

@@ -37,6 +37,12 @@ const BrandSetup = () => {
 
 
   return (
+<<<<<<< HEAD
+    <div className=" text-gray-600">
+      <div className="flex px-4 gap-3 justify-end py-6">
+        <SimpleButton text={"Reset"} />
+        <CheckOutButton text={"Save Changes"} />
+=======
     <div className="px-5 text-gray-600">
       <Formik
         initialValues={initialValues}
@@ -48,6 +54,7 @@ const BrandSetup = () => {
       <div className="flex px-4 gap-3 justify-end py-6">
         <SimpleButton text={'Reset'} type='button'/>
         <CheckOutButton type="submit" text={'Save Changes'} />
+>>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
       </div>
 
       <div className="border-spacing-1 border-2 rounded-md p-4 mb-10 shadow-sm">
@@ -62,13 +69,16 @@ const BrandSetup = () => {
           />
         </div>
       </div>
+<<<<<<< HEAD
+      <div className="border-spacing-1 mb-4 grid md:grid-cols-2 gap-40 border-2 rounded-md p-4 shadow-sm">
+=======
 
 
       <div className="border-spacing-1 mb-4 grid grid-cols-2 gap-40 border-2 rounded-md p-4 shadow-sm">
+>>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
         <div>
           <div className="pb-4">
             <h3 className="text-2xl py-3 font-semibold">Brand</h3>
-
             <div className="Image">
               <h3 className="py-3 text-lg font-semibold relative">Logo</h3>
               <div className="border-[1px] border-gray-300 border-dashed flex items-center p-4 flex-col">
@@ -113,6 +123,26 @@ const BrandSetup = () => {
                   />
                 </div>
               </div>
+              <div className="md:hidden rounded-full border-2 flex  justify-between ps-5 pe-1 py-2 shadow-lg mt-3">
+            <div>
+              <h1 className="text-black font-semibold">👋Need Help?</h1>
+              <h5 className="text-sm">Click here and start chatting with us</h5>
+            </div>
+
+            <div className="rounded-full bg-blue-500 w-10 h-10 grid place-content-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1.4em"
+                width="1.4em"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="#fff"
+                  d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"
+                ></path>
+              </svg>
+            </div>
+          </div>
             </div>
             <hr className="py-4" />
             <div className="Color ">
@@ -150,13 +180,34 @@ const BrandSetup = () => {
                   />
                 </div>
               </div>
+              <div className="md:hidden block mt-3">
+            <div className="rounded-lg ">
+              <div className="bg-blue-500 rounded-t-lg h-7" />
+              <div className="px-4 py-5">
+                <div className="flex items-end gap-3">
+                  <div className="bg-blue-500 p-2 rounded-sm">
+                    <PiRobotFill color="white" />
+                  </div>
+                  <div className="px-4 pb-5 pt-3 rounded-md bg-gray-200">
+                    Hi there 👋
+                    <br /> How can I help you today?
+                  </div>
+                </div>
+              </div>
+              <div className=" flex justify-end">
+                <p className="text-white py-3 px-1 rounded-md bg-blue-500">
+                  Hello, how are you?
+                </p>
+              </div>
+            </div>
+          </div>
             </div>
           </div>
         </div>
-        <div>
-          <div className="rounded-full border-2 flex w-1/2 justify-between ps-5 pe-1 shadow-lg mt-32">
+        <div className="md:block hidden">
+          <div className="rounded-full border-2 flex w-2/3 justify-between ps-5 pe-1 py-2 shadow-lg mt-32">
             <div>
-              <h1>👋Need Help?</h1>
+              <h1 className="text-black font-semibold">👋Need Help?</h1>
               <h5 className="text-sm">Click here and start chatting with us</h5>
             </div>
 
@@ -174,7 +225,7 @@ const BrandSetup = () => {
             </div>
           </div>
           <div className="mt-52">
-            <div className="rounded-lg w-1/2">
+            <div className="rounded-lg w-3/4">
               <div className="bg-blue-500 rounded-t-lg h-7" />
               <div className="px-4 py-5">
                 <div className="flex items-end gap-3">
@@ -187,13 +238,27 @@ const BrandSetup = () => {
                   </div>
                 </div>
               </div>
+              <div className=" flex justify-end">
+                <p className="text-white py-3 px-1 rounded-md bg-blue-500">
+                  Hello, how are you?
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+
+
+
+
+
+=======
 </form>
 )}
       </Formik>
+>>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
 
       {/* <div className="border-spacing-1 mb-4 grid grid-cols-1 gap-3 border-2 rounded-md p-4 shadow-sm">
         <div>
@@ -255,8 +320,11 @@ const BrandSetup = () => {
           </div>
         </div>
       </div> */}
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
     </div>
   );
 };

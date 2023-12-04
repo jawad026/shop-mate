@@ -6,7 +6,7 @@ const Chart = () => {
     datasets: [
       {
         label: "Matches Per Year",
-        data: ["40k", "50k", "60k", "70k", "80k"],
+        data: [40, 50, 60, 70, 80],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
@@ -34,6 +34,18 @@ const Chart = () => {
   return (
     <>
       {" "}
+<<<<<<< HEAD
+      {/* <div className="border-2  "> */}
+      <h3 className="text-2xl   font-bold">Last 7 days conversations</h3>
+      <div className="flex justify-center  mt-6 w-[1280px] h-[230px] ">
+        <Line
+          data={data}
+          width={"100%"}
+          options={{ maintainAspectRatio: false }}
+        />
+      </div>
+      {/* </div> */}
+=======
 
       <div className="border-2 mt-12 ">
 
@@ -44,6 +56,7 @@ const Chart = () => {
 
       </div>
       
+>>>>>>> 8979ed94fe0f18f48fc55ab674b4b23f2ee99541
     </>
   );
 };
