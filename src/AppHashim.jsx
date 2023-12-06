@@ -1,4 +1,3 @@
-import React from 'react'
 import Chart from './components/common/Chart/Chart'
 
 function HashimApp() {

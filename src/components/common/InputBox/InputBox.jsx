@@ -1,10 +1,18 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 
-const InputBox = ({label, disabled, required, onchange, name, value}) => {
+const InputBox = ({
+  label,
+  disabled,
+  required,
+  onchange,
+  name,
+  value,
+  type = "text",
+}) => {
   return (
-    <div className="relative" >
+    <div className="relative">
       <input
-        type="text"
+        type={type}
         name={name}
         value={value}
         id="floating_outlined"
@@ -13,8 +21,8 @@ const InputBox = ({label, disabled, required, onchange, name, value}) => {
         focus:outline-none focus:ring-0 focus:border-blue-600 peer"
         placeholder=" "
         onChange={onchange}
-        disabled = {disabled ? disabled : false}
-        required = {required ? required : true}
+        disabled={disabled ? disabled : false}
+        required={required ? required : true}
       />
       <label
         htmlFor="floating_outlined"
