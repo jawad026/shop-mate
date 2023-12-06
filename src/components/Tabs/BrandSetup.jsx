@@ -6,6 +6,8 @@ import InputBox from "../common/InputBox/InputBox";
 import SelectBox from "../common/SelectBox/SelectBox";
 import { PiRobotFill } from "react-icons/pi";
 import { Formik } from "formik";
+import { useState } from "react";
+import ColorInput from "../common/ColorInput/ColorInput";
 
 const initialValues = {
   positionButton: '',
@@ -13,12 +15,14 @@ const initialValues = {
   calloutMessage: "Click here and start chatting with us",
   calloutToggle: false,
   colorToggle: false,
-  color: "#8d3d80",
+  // color: "#8d3d80",
   greetings: "Hi there 👋How can I help you today?",
   shopName: "",
 };
 
 const BrandSetup = () => {
+
+  const [colorString, setColorString] = useState('#8d3d80');
 
   const submitForm = async (values) => {
     //   await axios.post("/api", {
@@ -32,9 +36,14 @@ const BrandSetup = () => {
     //     shopName: values.shopName,
     // })
     // .then((res) => console.log("Basic Page Submission done"));
+    values.color = colorString
     console.log("Values:",values)
   }
 
+
+  const handleColorChange = (e) => {
+    setColorString(e)
+  }
 
   return (
     <>
@@ -142,13 +151,26 @@ const BrandSetup = () => {
                   name={"colorToggle"} />
               </div>
               <div className="flex gap-4 flex-col">
-                <div>
-                  <InputBox label={"Color"} type={"color"} 
-                  value={values.color}
-                  onchange={handleChange}
-                  name={"color"}
-                  />
+
+
+                <div className="relative">
+                <span className="">
+                <input className="absolute top-[9px] right-[10px] w-[1.4rem] h-[1.4rem] mt-1" 
+                  value={colorString} 
+                  onChange={(e)=> {
+                  handleColorChange(e.target.value)
+                  }}
+                 type="color" ></input></span>
+
+                 <ColorInput
+                  // name="color"
+                  value={colorString}
+                  onchange={()=>{}}
+                 />
+                 
                 </div>
+
+
                 <div>
                   <InputBox label={"Greetings"} 
                   value={values.greetings}
@@ -214,10 +236,12 @@ const BrandSetup = () => {
           </div>
           <div className="mt-52">
             <div className="rounded-lg w-3/4">
-              <div className="bg-blue-500 rounded-t-lg h-7" />
+            <div className = {`bg-[${colorString}] rounded-t-lg h-7`} />
+              {/* <div className="bg-[#000000] rounded-t-lg h-7" /> */}
               <div className="px-4 py-5">
                 <div className="flex items-end gap-3">
-                  <div className="bg-blue-500 p-2 rounded-sm">
+                  <div className={`bg-[${colorString}] p-2 rounded-sm`}>
+                    {/* {console.log(colorString)} */}
                     <PiRobotFill color="white" />
                   </div>
                   <div className="px-4 pb-5 pt-3 rounded-md bg-gray-200">
@@ -226,7 +250,8 @@ const BrandSetup = () => {
                 </div>
               </div>
               <div className=" flex justify-end">
-                <p className="text-white py-3 px-1 rounded-md bg-blue-500">
+            <p className={`text-white py-3 px-1 rounded-md bg-[${colorString}]`}>
+                {/* <p className="text-white py-3 px-1 rounded-md bg-blue-500"> */}
                   Hello, how are you?
                 </p>
               </div>

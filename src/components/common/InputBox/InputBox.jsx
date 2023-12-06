@@ -1,10 +1,10 @@
 import React from "react";
 
-const InputBox = ({label, disabled, required, onchange, name, value}) => {
+const InputBox = ({label, disabled, required, onchange, name, value, type}) => {
   return (
     <div className="relative" >
       <input
-        type="text"
+        type={type || "text"}
         name={name}
         value={value}
         id="floating_outlined"
