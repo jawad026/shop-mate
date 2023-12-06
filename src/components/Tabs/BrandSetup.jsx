@@ -15,7 +15,7 @@ const initialValues = {
   calloutMessage: "Click here and start chatting with us",
   calloutToggle: false,
   colorToggle: false,
-  // color: "#8d3d80",
+  color: "#8d3d80",
   greetings: "Hi there 👋How can I help you today?",
   shopName: "",
 };
@@ -23,8 +23,6 @@ const initialValues = {
 const BrandSetup = () => {
   const [colorString, setColorString] = useState("#2196F3");
   const [toggleCallout, setToggleCallout] = useState(false);
-
-  const [colorString, setColorString] = useState('#8d3d80');
 
   const submitForm = async (values) => {
     //   await axios.post("/api", {
@@ -38,28 +36,15 @@ const BrandSetup = () => {
     //     shopName: values.shopName,
     // })
     // .then((res) => console.log("Basic Page Submission done"));
-<<<<<<< HEAD
     values.color = colorString;
     console.log("Values:", values);
   };
-=======
-    values.color = colorString
-    console.log("Values:",values)
-  }
->>>>>>> d1c27e7b2dedc7b8ab130bd88d29adfd99dbc2b9
 
   const handleColorChange = (e) => {
     setColorString(e);
   };
 
-<<<<<<< HEAD
   console.log(toggleCallout);
-=======
-  const handleColorChange = (e) => {
-    setColorString(e)
-  }
-
->>>>>>> d1c27e7b2dedc7b8ab130bd88d29adfd99dbc2b9
   return (
     <>
       <Formik
@@ -147,7 +132,6 @@ const BrandSetup = () => {
                           </h5>
                         </div>
 
-<<<<<<< HEAD
                         <div className="rounded-full bg-blue-500 w-10 h-10 grid place-content-center">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -163,79 +147,6 @@ const BrandSetup = () => {
                         </div>
                       </div>
                     )}
-=======
-            <div className="rounded-full bg-blue-500 w-10 h-10 grid place-content-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1.4em"
-                width="1.4em"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="#fff"
-                  d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"
-                ></path>
-              </svg>
-            </div>
-          </div>
-            </div>
-            <hr className="py-4" />
-            <div className="Color ">
-              <div className="flex justify-between items-center">
-                <h3 className="py-3 text-lg font-semibold relative">Color</h3>
-                <ToggleButton 
-                  value={values.colorToggle}
-                  onChange={()=>values.colorToggle =! values.colorToggle}
-                  name={"colorToggle"} />
-              </div>
-              <div className="flex gap-4 flex-col">
-
-
-                <div className="relative">
-                <span className="">
-                <input className="absolute top-[9px] right-[10px] w-[1.4rem] h-[1.4rem] mt-1" 
-                  value={colorString} 
-                  onChange={(e)=> {
-                  handleColorChange(e.target.value)
-                  }}
-                 type="color" ></input></span>
-
-                 <ColorInput
-                  // name="color"
-                  value={colorString}
-                  onchange={()=>{}}
-                 />
-                 
-                </div>
-
-
-                <div>
-                  <InputBox label={"Greetings"} 
-                  value={values.greetings}
-                  onchange={handleChange}
-                  name={"greetings"} 
-                  />
-                  <p className="text-gray-600 text-sm">
-                    Greetings will be the first message when customer click
-                    bot,you can add some emoji 😊 to make greetings better
-                  </p>
-                </div>
-                <div>
-                  <InputBox label={"Shop Name"} 
-                  value={values.shopName}
-                  onchange={handleChange}
-                  name={"shopName"} 
-                  />
-                </div>
-              </div>
-              <div className="md:hidden block mt-3">
-            <div className="rounded-lg ">
-              <div className="bg-blue-500 rounded-t-lg h-7" />
-              <div className="px-4 py-5">
-                <div className="flex items-end gap-3">
-                  <div className="bg-blue-500 p-2 rounded-sm">
-                    <PiRobotFill color="white" />
->>>>>>> d1c27e7b2dedc7b8ab130bd88d29adfd99dbc2b9
                   </div>
                   <hr className="py-4" />
                   <div className="Color ">
@@ -342,7 +253,6 @@ const BrandSetup = () => {
                       <h5 className="text-sm">{values.calloutMessage}</h5>
                     </div>
 
-<<<<<<< HEAD
                     <div className="rounded-full bg-blue-500 p-3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -355,32 +265,9 @@ const BrandSetup = () => {
                         ></path>
                       </svg>
                     </div>
-=======
-            <div className="rounded-full bg-blue-500 p-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1.4em"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="#fff"
-                  d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"
-                ></path>
-              </svg>
-            </div>
-          </div>
-          <div className="mt-52">
-            <div className="rounded-lg w-3/4">
-            <div className = {`bg-[${colorString}] rounded-t-lg h-7`} />
-              {/* <div className="bg-[#000000] rounded-t-lg h-7" /> */}
-              <div className="px-4 py-5">
-                <div className="flex items-end gap-3">
-                  <div className={`bg-[${colorString}] p-2 rounded-sm`}>
-                    {/* {console.log(colorString)} */}
-                    <PiRobotFill color="white" />
->>>>>>> d1c27e7b2dedc7b8ab130bd88d29adfd99dbc2b9
                   </div>
                 )}
+
                 <div className="mt-52">
                   <div className="rounded-lg w-3/4">
                     <div
@@ -414,15 +301,6 @@ const BrandSetup = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-              <div className=" flex justify-end">
-            <p className={`text-white py-3 px-1 rounded-md bg-[${colorString}]`}>
-                {/* <p className="text-white py-3 px-1 rounded-md bg-blue-500"> */}
-                  Hello, how are you?
-                </p>
-              </div>
->>>>>>> d1c27e7b2dedc7b8ab130bd88d29adfd99dbc2b9
             </div>
           </form>
         )}
