@@ -3,6 +3,7 @@ import { useState } from "react";
 import BasicSetup from "./BasicSetup";
 import BrandSetup from "./BrandSetup";
 import ProductSetup from "./ProductSetup";
+import InstallationInstruction from "./InstallationInstruction";
 
 const Tab = ({ label, active, onClick }) => {
   return (
@@ -50,6 +51,11 @@ const SettingTabs = () => {
           active={activeTab === "tab3"}
           onClick={() => handleTabClick("tab3")}
         />
+        <Tab
+          label="Installation Instructions"
+          active={activeTab === "tab4"}
+          onClick={() => handleTabClick("tab4")}
+        />
       </ul>
 
       {/* Tab Content */}
@@ -67,6 +73,11 @@ const SettingTabs = () => {
         {activeTab === "tab3" && (
           <div>
             <ProductSetup />
+          </div>
+        )}
+        {activeTab === "tab4" && (
+          <div>
+            <InstallationInstruction />
           </div>
         )}
       </div>
