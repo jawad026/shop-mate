@@ -1,27 +1,28 @@
-
+import AutoProductSelection from "./components/Auto Product Selection/AutoProductSelection";
+import CheckBox from "./components/Buttons/CheckBox";
+import CheckOutButton from "./components/Buttons/CheckOutButton";
+import RadioButton from "./components/Buttons/RadioButton";
+import SimpleButton from "./components/Buttons/SimpleButton";
+import ToggleButton from "./components/Buttons/ToggleButton";
 import MemberShip from "./components/MemberShip/MemberShip";
 
 function AppAli() {
   return (
     <>
-
       {/* <Sidebar /> */}
 
       {/* <CheckOutButton />
       <SimpleButton />
       <ToggleButton />
       <CheckBox /> */}
-{/* <Product/> */}
-  {/* <AutoProductSelection/> */}
-{/* <RadioButton/> */}
+      {/* <Product/> */}
+      
+      {/* <AutoProductSelection/> */}
+      {/* <RadioButton/> */}
 
-
-<MemberShip/>
-
+      <MemberShip />
     </>
-    
   );
 }
 
 export default AppAli;
-

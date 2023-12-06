@@ -1,18 +1,10 @@
 /* eslint-disable react/prop-types */
 
-const InputBox = ({
-  label,
-  disabled,
-  required,
-  onchange,
-  name,
-  value,
-  type = "text",
-}) => {
+const InputBox = ({label, disabled, required, onchange, name, value}) => {
   return (
     <div className="relative">
       <input
-        type={type}
+        type="text"
         name={name}
         value={value}
         id="floating_outlined"

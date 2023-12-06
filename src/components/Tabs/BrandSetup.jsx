@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable react/no-unescaped-entities */
 import CheckOutButton from "../Buttons/CheckOutButton";
 import SimpleButton from "../Buttons/SimpleButton";
@@ -8,6 +7,7 @@ import SelectBox from "../common/SelectBox/SelectBox";
 import { PiRobotFill } from "react-icons/pi";
 import { Formik } from "formik";
 import { useState } from "react";
+import ColorInput from "../common/ColorInput/ColorInput";
 
 const initialValues = {
   positionButton: "",
@@ -15,13 +15,15 @@ const initialValues = {
   calloutMessage: "Click here and start chatting with us",
   calloutToggle: false,
   colorToggle: false,
-  color: "#1da1f2u",
+  color: "#8d3d80",
   greetings: "Hi there 👋How can I help you today?",
   shopName: "",
 };
 
 const BrandSetup = () => {
-  const [selectedColor, setSelectedColor] = useState("#1da1f2");
+  const [colorString, setColorString] = useState("#2196F3");
+  const [toggleCallout, setToggleCallout] = useState(false);
+
   const submitForm = async (values) => {
     //   await axios.post("/api", {
     //     positionButton: values.positionButton,
@@ -34,9 +36,15 @@ const BrandSetup = () => {
     //     shopName: values.shopName,
     // })
     // .then((res) => console.log("Basic Page Submission done"));
+    values.color = colorString;
     console.log("Values:", values);
   };
-  console.log(selectedColor);
+
+  const handleColorChange = (e) => {
+    setColorString(e);
+  };
+
+  console.log(toggleCallout);
   return (
     <>
       <Formik
@@ -68,37 +76,14 @@ const BrandSetup = () => {
               <div>
                 <div className="pb-4">
                   <h3 className="text-2xl py-3 font-semibold">Brand</h3>
-                  <div className="Image">
-                    <h3 className="py-3 text-lg font-semibold relative">
-                      Logo
-                    </h3>
-                    <div className="border-[1px] border-gray-300 border-dashed flex items-center p-4 flex-col">
-                      <h4 className="text-blue-500">
-                        <label htmlFor="logoUpload" className="cursor-pointer">
-                          Upload Logo
-                          <input
-                            type="file"
-                            id="logoUpload"
-                            className="absolute hidden"
-                          />
-                        </label>
-                      </h4>
-                      <p className="text-gray-300">Best Size 150x150</p>
-                      <p className="text-gray-300">
-                        Best Formate are jpeg,jpg,png,or gif
-                      </p>
-                    </div>
-                  </div>
                   <div className="Callout ">
                     <div className="flex justify-between items-center">
                       <h3 className="py-3 text-lg font-semibold relative">
                         Callout
                       </h3>
                       <ToggleButton
-                        value={values.calloutToggle}
-                        onChange={() =>
-                          (values.calloutToggle = !values.calloutToggle)
-                        }
+                        value={toggleCallout}
+                        onChange={() => setToggleCallout(!toggleCallout)}
                         name={"calloutToggle"}
                       />
                     </div>
@@ -120,30 +105,48 @@ const BrandSetup = () => {
                         />
                       </div>
                     </div>
-                    <div className="md:hidden rounded-full border-2 flex  justify-between ps-5 pe-1 py-2 shadow-lg mt-3">
-                      <div>
-                        <h1 className="text-black font-semibold">
-                          👋Need Help?
-                        </h1>
-                        <h5 className="text-sm">
-                          Click here and start chatting with us
-                        </h5>
+                    {toggleCallout ? (
+                      <div className="md:hidden rounded-full border-2 w-fit px-3 py-2 shadow-lg mt-3">
+                        <div className="rounded-full bg-blue-500 w-10 h-10 grid place-content-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1.4em"
+                            width="1.4em"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              fill="#fff"
+                              d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"
+                            ></path>
+                          </svg>
+                        </div>
                       </div>
+                    ) : (
+                      <div className="md:hidden rounded-full border-2 flex  justify-between ps-5 pe-1 py-2 shadow-lg mt-3">
+                        <div>
+                          <h1 className="text-black font-semibold">
+                            👋Need Help?
+                          </h1>
+                          <h5 className="text-sm">
+                            Click here and start chatting with us
+                          </h5>
+                        </div>
 
-                      <div className="rounded-full bg-blue-500 w-10 h-10 grid place-content-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="1.4em"
-                          width="1.4em"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="#fff"
-                            d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"
-                          ></path>
-                        </svg>
+                        <div className="rounded-full bg-blue-500 w-10 h-10 grid place-content-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1.4em"
+                            width="1.4em"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              fill="#fff"
+                              d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"
+                            ></path>
+                          </svg>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                   <hr className="py-4" />
                   <div className="Color ">
@@ -151,24 +154,27 @@ const BrandSetup = () => {
                       <h3 className="py-3 text-lg font-semibold relative">
                         Color
                       </h3>
-                      <ToggleButton
-                        value={values.colorToggle}
-                        onChange={() =>
-                          (values.colorToggle = !values.colorToggle)
-                        }
-                        name={"colorToggle"}
-                      />
                     </div>
                     <div className="flex gap-4 flex-col">
-                      <div>
-                        <InputBox
-                          label={"Color"}
-                          value={values.color}
-                          onchange={handleChange}
-                          type={"color"}
-                          name={"color"}
+                      <div className="relative">
+                        <span className="">
+                          <input
+                            className="absolute top-[9px] right-[10px] w-[1.4rem] h-[1.4rem] mt-1 bg-transparent"
+                            value={colorString}
+                            onChange={(e) => {
+                              handleColorChange(e.target.value);
+                            }}
+                            type="color"
+                          ></input>
+                        </span>
+                        <ColorInput
+                          // name="color"
+                          className="px-4"
+                          value={colorString}
+                          onchange={() => {}}
                         />
                       </div>
+
                       <div>
                         <InputBox
                           label={"Greetings"}
@@ -194,19 +200,14 @@ const BrandSetup = () => {
                     <div className="md:hidden block mt-3">
                       <div className="rounded-lg ">
                         <div
-                          className=" rounded-t-lg h-7"
-                          style={{
-                            backgroundColor: selectedColor,
-                            color: "blue",
-                          }}
+                          className="rounded-t-lg h-7"
+                          style={{ backgroundColor: colorString }}
                         />
                         <div className="px-4 py-5">
                           <div className="flex items-end gap-3">
                             <div
-                              className={`p-2 rounded-sm`}
-                              style={{
-                                backgroundColor: selectedColor,
-                              }}
+                              className="p-2 rounded-sm"
+                              style={{ backgroundColor: colorString }}
                             >
                               <PiRobotFill color="white" />
                             </div>
@@ -218,10 +219,8 @@ const BrandSetup = () => {
                         </div>
                         <div className=" flex justify-end">
                           <p
-                            className={`text-white py-3 px-1 rounded-md`}
-                            style={{
-                              backgroundColor: selectedColor,
-                            }}
+                            className="text-white py-3 px-1 rounded-md "
+                            style={{ backgroundColor: colorString }}
                           >
                             Hello, how are you?
                           </p>
@@ -232,39 +231,56 @@ const BrandSetup = () => {
                 </div>
               </div>
               <div className="md:block hidden">
-                <div className="rounded-full border-2 flex w-2/3 justify-between ps-5 pe-1 py-2 shadow-lg mt-32">
-                  <div>
-                    <h1>{values.calloutTitle}</h1>
-                    <h5 className="text-sm">{values.calloutMessage}</h5>
+                {toggleCallout ? (
+                  <div className="rounded-full border-2 w-fit px-3 py-2 shadow-lg mt-32">
+                    <div className="rounded-full bg-blue-500 p-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="1.4em"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="#fff"
+                          d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"
+                        ></path>
+                      </svg>
+                    </div>
                   </div>
+                ) : (
+                  <div className="rounded-full border-2 flex w-2/3 justify-between ps-5 pe-1 py-2 shadow-lg mt-32">
+                    <div>
+                      <h1>{values.calloutTitle}</h1>
+                      <h5 className="text-sm">{values.calloutMessage}</h5>
+                    </div>
 
-                  <div className="rounded-full bg-blue-500 p-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="1.4em"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        fill="#fff"
-                        d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"
-                      ></path>
-                    </svg>
+                    <div className="rounded-full bg-blue-500 p-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="1.4em"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="#fff"
+                          d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"
+                        ></path>
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                )}
                 <div className="mt-52">
                   <div className="rounded-lg w-3/4">
                     <div
-                      className={`  rounded-t-lg h-7`}
-                      style={{ backgroundColor: selectedColor }}
+                      className={` rounded-t-lg h-7`}
+                      style={{ backgroundColor: colorString }}
                     />
+                    {/* <div className="bg-[#000000] rounded-t-lg h-7" /> */}
                     <div className="px-4 py-5">
                       <div className="flex items-end gap-3">
                         <div
-                          className=" p-2 rounded-sm"
-                          style={{
-                            backgroundColor: selectedColor,
-                          }}
+                          className={` p-2 rounded-sm`}
+                          style={{ backgroundColor: colorString }}
                         >
+                          {/* {console.log(colorString)} */}
                           <PiRobotFill color="white" />
                         </div>
                         <div className="px-4 pb-5 pt-3 rounded-md bg-gray-200">
@@ -274,9 +290,10 @@ const BrandSetup = () => {
                     </div>
                     <div className=" flex justify-end">
                       <p
-                        className="text-white py-3 px-1 rounded-md "
-                        style={{ backgroundColor: selectedColor }}
+                        className={`text-white py-3 px-1 rounded-md ]`}
+                        style={{ backgroundColor: colorString }}
                       >
+                        {/* <p className="text-white py-3 px-1 rounded-md bg-blue-500"> */}
                         Hello, how are you?
                       </p>
                     </div>
