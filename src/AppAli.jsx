@@ -5,8 +5,6 @@ import RadioButton from "./components/Buttons/RadioButton";
 import SimpleButton from "./components/Buttons/SimpleButton";
 import ToggleButton from "./components/Buttons/ToggleButton";
 import MemberShip from "./components/MemberShip/MemberShip";
-import Product from "./components/Product/Product";
-import Sidebar from "./components/Sidebar/Sidebar";
 
 function AppAli() {
   return (
