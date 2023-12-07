@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import BasicSetup from "./BasicSetup";
 import BrandSetup from "./BrandSetup";
