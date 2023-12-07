@@ -2,7 +2,7 @@
 
 const InputBox = ({label, disabled, required, onchange, name, value, type}) => {
   return (
-    <div className="relative">
+    <div className="relative z-0">
       <input
         type={type || "text"}
         name={name}
@@ -25,7 +25,7 @@ const InputBox = ({label, disabled, required, onchange, name, value, type}) => {
         peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 
         peer-placeholder-shown:top-1/2 peer-focus:top-2
         peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 
-        rtl:peer-focus:left-auto start-1 z-0"
+        rtl:peer-focus:left-auto start-1 "
       >
         {label}
       </label>

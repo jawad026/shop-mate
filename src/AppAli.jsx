@@ -4,7 +4,7 @@ import CheckOutButton from "./components/Buttons/CheckOutButton";
 import RadioButton from "./components/Buttons/RadioButton";
 import SimpleButton from "./components/Buttons/SimpleButton";
 import ToggleButton from "./components/Buttons/ToggleButton";
-import MemberShip from "./components/MemberShip/MemberShip";
+import MemberShip from "./components/Tabs/MemberShip";
 
 function AppAli() {
   return (
