@@ -14,7 +14,7 @@ const Layout = () => {
   const closeDrawer = () => {
     setIsDrawerOpen(false);
   };
-  console.log(isDrawerOpen);
+  // console.log(isDrawerOpen);
   return (
     <div className="flex overflow-hidden">
       {/* Sidebar */}

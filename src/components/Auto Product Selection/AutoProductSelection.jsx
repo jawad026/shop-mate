@@ -4,8 +4,12 @@ function AutoProductSelection() {
     <div className="border rounded-lg m-10">
 
       <div>
-        <div className="flex justify-end mt-12 mr-28 ">
-          <button className=" bg-blue-500 hover:bg-white text-white font-semibold hover:text-blue-500 py-2 px-4 border border-blue-500 hover:border-blue-500 rounded">
+      <div className="flex justify-end">
+        {/* <div className="flex justify-end mt-12 mr-28 "> */}
+          <button className=" bg-blue-500 hover:bg-white text-white font-semibold
+           hover:text-blue-500 py-2 px-4 border border-blue-500 hover:border-blue-500 rounded
+           ml-auto
+           ">
             SAVE CHANGES
           </button>
         </div>

@@ -4,8 +4,10 @@ import AutoProductSelection from "../../components/Auto Product Selection/AutoPr
 import CustomSelection from "../../components/CustomSelection/CustomSelection";
 import InputBox from "../../components/common/InputBox/InputBox";
 import { CiSearch } from "react-icons/ci";
+import {AutoSelectIcon, CustomSelectIcon} from "../../assets/icons";
 
-const Tab = ({ label, active, onClick }) => {
+
+const Tab = ({ label, active, onClick , icon}) => {
   return (
     <li className="me-2">
       <a
@@ -18,6 +20,7 @@ const Tab = ({ label, active, onClick }) => {
         onClick={onClick}
         aria-current={active ? "page" : undefined}
       >
+        {icon? icon: null}
         {label}
       </a>
     </li>
@@ -35,8 +38,8 @@ const ProductPage = () => {
 
   return (
     <>
-      <h1 className="text-[36px]">Orders</h1>
-      <div className="pt-3 mb-5 z-0">
+      <h1 className="text-[36px] mt-14 m-10 mb-0">Orders</h1>
+      <div className="pt-3 mb-5 w-[50%] mx-10">
         <InputBox
           width="30rem"
           label={
@@ -47,14 +50,18 @@ const ProductPage = () => {
           }
         />
       </div>
-      <div className="shadow-xl border border-color: black-800 text-sm font-medium text-start  text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+      <div className="shadow-xl border rounded-md border-color: black-800 text-sm font-medium text-start  
+      text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 lg:mx-10"
+      >
         <ul className="flex flex-wrap -mb-px">
-          <Tab
+            <Tab
+            icon = {AutoSelectIcon}
             label="Auto Product Selection"
             active={activeTab === "tab1"}
             onClick={() => handleTabClick("tab1")}
           />
           <Tab
+          icon = {CustomSelectIcon}
             label="Custom Product Selection"
             active={activeTab === "tab2"}
             onClick={() => handleTabClick("tab2")}
