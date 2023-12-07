@@ -1,10 +1,9 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import BasicSetup from "./BasicSetup";
 import BrandSetup from "./BrandSetup";
 import ProductSetup from "./ProductSetup";
 import InstallationInstruction from "./InstallationInstruction";
-import MemberShip from "../Tabs/MemberShip";
+import MemberShip from "./MemberShip";
 
 const Tab = ({ label, active, onClick }) => {
   return (
@@ -57,7 +56,7 @@ const SettingTabs = () => {
           active={activeTab === "tab4"}
           onClick={() => handleTabClick("tab4")}
         />
-        <Tab
+           <Tab
           label="Membership"
           active={activeTab === "tab5"}
           onClick={() => handleTabClick("tab5")}
