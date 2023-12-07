@@ -4,6 +4,7 @@ import BasicSetup from "./BasicSetup";
 import BrandSetup from "./BrandSetup";
 import ProductSetup from "./ProductSetup";
 import InstallationInstruction from "./InstallationInstruction";
+import MemberShip from "../Tabs/MemberShip";
 
 const Tab = ({ label, active, onClick }) => {
   return (
@@ -56,6 +57,11 @@ const SettingTabs = () => {
           active={activeTab === "tab4"}
           onClick={() => handleTabClick("tab4")}
         />
+        <Tab
+          label="Membership"
+          active={activeTab === "tab5"}
+          onClick={() => handleTabClick("tab5")}
+        />
       </ul>
 
       {/* Tab Content */}
@@ -78,6 +84,11 @@ const SettingTabs = () => {
         {activeTab === "tab4" && (
           <div>
             <InstallationInstruction />
+          </div>
+        )}
+        {activeTab === "tab5" && (
+          <div>
+            <MemberShip />
           </div>
         )}
       </div>

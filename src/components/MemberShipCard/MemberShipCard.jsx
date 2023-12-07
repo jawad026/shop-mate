@@ -4,7 +4,6 @@ import SimpleButton from "../Buttons/SimpleButton";
 function MemberShipCard({ onClick, type, text, plan, subscription, icon }) {
   return (
     <>
-      
       <div>
         <section className="bg-white ">
           <div className="">
