@@ -1,6 +1,9 @@
 import { RiLuggageCartLine, RiSendPlane2Line } from "react-icons/ri";
 import CheckOutButton from "../Buttons/CheckOutButton";
 import MyImage from "../../assets/something.gif";
+import Second from "../../assets/step2.png";
+import First from "../../assets/step1.png";
+
 import { FaHandPointDown } from "react-icons/fa";
 import { GrEmoji } from "react-icons/gr";
 import { BiMessage } from "react-icons/bi";
@@ -200,14 +203,19 @@ const InstallationInstruction = () => {
             </h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
-            <div className="border rounded-md px-6 py-5 border-gray-300">
-              <p>
-                Click Green Button <FaHandPointDown />{" "}
-              </p>
+            <div className="border rounded-md px-6 py-5 relative border-gray-300">
+              <img className="h-15 w-28 absolute left-0 top-1" src={First} alt="Step 2" />
+              <div className="flex mt-9">
+                <p >Click Blue Button</p>
+
+                <FaHandPointDown />
+              </div>
+
               <CheckOutButton text={"PREVIEW AND ACTIVATE BOT IN THEME"} />
             </div>
-            <div className="border rounded-md px-6 py-5 border-gray-300">
-              <p>In theme editor toggle ON ShopMate App embed</p>
+            <div className="border rounded-md px-6 py-5 relative border-gray-300 ">
+              <img className="h-15 w-28 absolute left-0 top-1 " src={Second} alt="Step 2" />
+              <p className="mt-9">In theme editor toggle ON ShopMate App embed</p>
               <p>Press Save button</p>
             </div>
           </div>
