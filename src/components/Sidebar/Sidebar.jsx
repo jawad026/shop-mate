@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div className="w-28 h-screen  bg-white-500 shadow-md ">
       <div className="flex flex-col gap-3 items-center text-sm">
-        <NavLink to={"/shop"}>
+        <NavLink to={"/shop/home"}>
           <div className="p-5 flex flex-col items-center mt-2">
             <div className="icon">
               <svg
@@ -46,10 +46,10 @@ const Sidebar = () => {
                 ></path>
               </svg>
             </div>
-            <div className="">CareCart</div>
+            <div className="text-black">CareCart</div>
           </div>
         </NavLink>
-        <NavLink to={"/shop"}>
+        <NavLink to={"/shop/home"}>
           <div className="p-5 flex flex-col items-center active:text-blue-500 hover:text-blue-500 gap-2">
             <div className="icon">
               <MdDashboard size={32} />

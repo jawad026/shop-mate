@@ -94,6 +94,7 @@ const BrandSetup = () => {
                           value={values.calloutTitle}
                           onchange={handleChange}
                           name={"calloutTitle"}
+                          maxLength={30}
                         />
                       </div>
                       <div>
@@ -102,6 +103,7 @@ const BrandSetup = () => {
                           value={values.calloutMessage}
                           onchange={handleChange}
                           name={"calloutMessage"}
+                          maxLength={30}
                         />
                       </div>
                     </div>
@@ -181,6 +183,7 @@ const BrandSetup = () => {
                           value={values.greetings}
                           onchange={handleChange}
                           name={"greetings"}
+                          maxLength={255}
                         />
                         <p className="text-gray-600 text-sm">
                           Greetings will be the first message when customer
@@ -194,6 +197,7 @@ const BrandSetup = () => {
                           value={values.shopName}
                           onchange={handleChange}
                           name={"shopName"}
+                          maxLength={40}
                         />
                       </div>
                     </div>
@@ -230,6 +234,7 @@ const BrandSetup = () => {
                   </div>
                 </div>
               </div>
+              {/* for large screen */}
               <div className="md:block hidden">
                 {toggleCallout ? (
                   <div className="rounded-full border-2 w-fit px-3 py-2 shadow-lg mt-32">
@@ -247,7 +252,7 @@ const BrandSetup = () => {
                     </div>
                   </div>
                 ) : (
-                  <div className="rounded-full border-2 flex w-2/3 justify-between ps-5 pe-1 py-2 shadow-lg mt-32">
+                  <div className="rounded-full border-2 flex w-80 justify-between ps-5 pe-1 py-2 shadow-lg mt-32">
                     <div>
                       <h1>{values.calloutTitle}</h1>
                       <h5 className="text-sm">{values.calloutMessage}</h5>

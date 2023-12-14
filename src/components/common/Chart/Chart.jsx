@@ -36,7 +36,7 @@ const Chart = () => {
       {" "}
       <h3 className="text-2xl   font-bold">Last 7 days conversations</h3>
 
-      <div className="flex justify-center  mt-6 w-[1280px] h-[230px] ">
+      <div className="flex justify-center  mt-6 w-full h-[230px] ">
         <Line
           data={data}
           width={"100%"}
