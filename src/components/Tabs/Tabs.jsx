@@ -1,7 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import BasicSetup from "./BasicSetup";
 import BrandSetup from "./BrandSetup";
-import ProductSetup from "./ProductSetup";
 import InstallationInstruction from "./InstallationInstruction";
 import MemberShip from "./MemberShip";
 
@@ -42,14 +42,9 @@ const SettingTabs = () => {
           onClick={() => handleTabClick("tab1")}
         />
         <Tab
-          label="Brand Setup"
+          label="Bot Setup"
           active={activeTab === "tab2"}
           onClick={() => handleTabClick("tab2")}
-        />
-        <Tab
-          label="Product Setup"
-          active={activeTab === "tab3"}
-          onClick={() => handleTabClick("tab3")}
         />
         <Tab
           label="Installation Instructions"
@@ -73,11 +68,6 @@ const SettingTabs = () => {
         {activeTab === "tab2" && (
           <div>
             <BrandSetup />
-          </div>
-        )}
-        {activeTab === "tab3" && (
-          <div>
-            <ProductSetup />
           </div>
         )}
         {activeTab === "tab4" && (
