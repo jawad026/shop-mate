@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const nevigate = useNavigate();
   const handleLogin = () => {
-    nevigate("/shop");
+    nevigate("/shop/home");
   };
   return (
     <>
