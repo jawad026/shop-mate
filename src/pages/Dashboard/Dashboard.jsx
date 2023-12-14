@@ -11,8 +11,7 @@ const Dashboard = () => {
         <div className="grid grid-col-1  md:grid-col-4 gap-3 md:grid-flow-col">
           <Card title={"Lead"} count={"1"} index={"01"} />
           <Card title={"Visitors"} count={"0"} index={"02"} />
-          <Card title={"Conversations"} count={"0"} index={"03"} />
-          <Card title={"Messages"} count={"0"} index={"04"} />
+          <Card title={"Active tokken"} count={"0"} index={"03"} />
         </div>
       </div>
 

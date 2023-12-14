@@ -18,17 +18,17 @@ const Layout = () => {
   return (
     <div className="flex overflow-hidden">
       {/* Sidebar */}
-      <div className="fixed h-full z-10 hidden md:block">
+      <div className="fixed h-full z-20 hidden md:block">
         <Sidebar />
       </div>
-      <div className="fixed h-full z-10 block md:hidden">
+      <div className="fixed h-full z-20 block md:hidden">
         <MobileSidebar isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer} />
       </div>
 
       {/* Main Content Area */}
       <div className="w-screen md:ml-5">
         {/* Topbar */}
-        <div className="fixed z-0  w-full">
+        <div className="fixed z-10  w-full">
           <Topbar set={openDrawer} />
         </div>
 
