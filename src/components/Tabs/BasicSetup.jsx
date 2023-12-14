@@ -2,12 +2,11 @@ import CheckOutButton from "../Buttons/CheckOutButton";
 import SimpleButton from "../Buttons/SimpleButton";
 import InputBox from "../common/InputBox/InputBox";
 import { Formik } from "formik";
+import TextArea from "../common/TextArea/TextArea";
 
 const initialValues = {
   botName: "ChatBot",
   storeIntro: "",
-  discount: "",
-  customerEmail: "",
 };
 
 const BasicSetup = () => {
@@ -57,11 +56,13 @@ const BasicSetup = () => {
                 </p>
               </div>
 
-              <InputBox 
-              onchange={handleChange}
-              value={values.storeIntro}
-              name={"storeIntro"} 
-              label={"Store Introduction"} />
+              <TextArea
+                maxLength = {300}
+                onChange={handleChange}
+                value={values.storeIntro}
+                name={"storeIntro"} 
+                label={"Store Introduction"}
+              />
               <p className="text-gray-600 text-sm">
                 Our bot will automatically learn your store policy,so add most
                 important things here and bot will learn it with high priority
