@@ -11,7 +11,7 @@ const Login = () => {
   return (
     <>
     <div className="bg-opacity-[0.2] bg-blue-100 bg-cover bg-black-500 h-screen flex items-center flex-col">
-      <div className=" mt-12 lg:mt-0 max-w-[250px]">
+      <div className=" mt-20 sm:mt-[15vh] max-w-[250px]">
         <img src={image} />
       </div>
       <div
@@ -28,23 +28,23 @@ const Login = () => {
         <div className="sm:mb-[1.5rem] mb-[0.5rem]">
           <InputBox label={"Store Url"} />
         </div>
-        <div className="mb-5 flex align-middle items-baseline justify-between">
-          <p className="md:mb-[6rem] md:pb-3 font-normal text-gray-700 dark:text-gray-400">
+        <div className="md:mb-5 flex align-middle items-baseline justify-between">
+          <p className="md:mb-[5rem] md:pb-3 font-normal text-gray-700 dark:text-gray-400">
             Are you on Shopify?
           </p>
           <Button text={"Login"} onClick={handleLogin} />
         </div>
-        <p className=" lg:mt-[3rem] md:mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <p className="  md:mb-3 font-normal text-gray-700 dark:text-gray-400">
         Start Using ShopMate Today
         </p>
       </div >
 
 
-      <div className="flex justify-center pt-10">
+      <div className=" md:mt-40 flex justify-center pt-10">
       <p className="absolute bottom-0 sm:mb-0 mb-20 font-normal text-[12px] text-black-700 dark:text-gray-400  md:mr-[-83px] md:right-1/2">
             Copyright 2021 Carecart
       </p>
-    <div className="absolute bottom-0 sm:mb-0 mb-5 sm:right-0 ">
+    <div className="absolute bottom-0 sm:mb-0 mb-5 sm:right-0 flex items-center flex-col">
       <p className="   font-normal text-[12px] text-black-700 dark:text-gray-400 first-letter:right-0">
         Powered By
       </p>
@@ -56,22 +56,6 @@ const Login = () => {
 
 
     </div>
-
-
-  {/* <div>
-      <p className="  font-normal text-[12px] text-black-700 dark:text-gray-400 absolute mr-[-83px] right-1/2">
-            Copyright 2021 Carecart
-      </p>
-    <div className="absolute lg:right-0 right-1/2">
-      <p className="   font-normal text-[12px] text-black-700 dark:text-gray-400 first-letter:right-0">
-        Powered By
-      </p>
-    <div className=" flex justify-center align-middle items-center">
-        <img src = {carecartLogo} alt=""/>
-    </div>
-    </div>
-  </div> */}
-
     </>
   );
 };
