@@ -204,18 +204,29 @@ const InstallationInstruction = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
             <div className="border rounded-md px-6 py-5 relative border-gray-300">
-              <img className="h-15 w-28 absolute left-0 top-1" src={First} alt="Step 2" />
+              <img
+                className="h-15 w-28 absolute left-0 top-1"
+                src={First}
+                alt="Step 1"
+              />
               <div className="flex mt-9">
-                <p >Click Blue Button</p>
+                <p>Click Blue Button</p>
 
                 <FaHandPointDown />
               </div>
 
               <CheckOutButton text={"PREVIEW AND ACTIVATE BOT IN THEME"} />
             </div>
+
             <div className="border rounded-md px-6 py-5 relative border-gray-300 ">
-              <img className="h-15 w-28 absolute left-0 top-1 " src={Second} alt="Step 2" />
-              <p className="mt-9">In theme editor toggle ON ShopMate App embed</p>
+              <img
+                className="h-15 w-28 absolute left-0 top-1 "
+                src={Second}
+                alt="Step 2"
+              />
+              <p className="mt-9">
+                In theme editor toggle ON ShopMate App embed
+              </p>
               <p>Press Save button</p>
             </div>
           </div>

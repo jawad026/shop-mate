@@ -23,7 +23,7 @@ function MemberShipCard({ onClick, type, text, plan, subscription, icon }) {
                 </div>
 
                 <div className="flex justify-center items-baseline my-8">
-                  <span className="mr-2 text-4xl">
+                  <span className="mr-2 text-4xl text-blue-gray-800 ">
                     <span className="text-sm text-gray-700 mb">$</span>
                     {subscription}
                   </span>
@@ -31,7 +31,7 @@ function MemberShipCard({ onClick, type, text, plan, subscription, icon }) {
 
                 <ul
                   role="list"
-                  className=" flex flex-col  mb-8  space-y-4 text-left"
+                  className=" flex flex-col  mb-8  space-y-4 text-left text-blue-gray-700"
                 >
                   <li className="flex  items-center space-x-3">
                     <span>Available 24/7, reply in up to 70 languages.</span>
