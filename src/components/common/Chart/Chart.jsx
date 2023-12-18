@@ -1,5 +1,6 @@
 import { Line } from "react-chartjs-2";
 import "chart.js/auto";
+import InputBox from "../InputBox/InputBox";
 const Chart = () => {
   const data = {
     labels: ["2019", "2020", "2021", "2022", "2023"],
@@ -34,15 +35,20 @@ const Chart = () => {
   return (
     <>
       {" "}
-      <h3 className="text-2xl   font-bold">Last 7 days conversations</h3>
-
+      <div className="flex justify-between">
+        <h3 className="text-2xl   font-bold">Last 7 days usage</h3>
+        <div className="flex gap-3">
+          <InputBox type={'date'}/>
+          <InputBox type={'date'}/>
+        </div>
+      </div>
       <div className="flex justify-center  mt-6 w-full h-[230px] ">
         <Line
           data={data}
           width={"100%"}
           options={{ maintainAspectRatio: false }}
         />
-      </div> 
+      </div>
     </>
   );
 };
