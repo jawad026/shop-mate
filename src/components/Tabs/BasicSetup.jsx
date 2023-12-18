@@ -1,5 +1,5 @@
-import CheckOutButton from "../Buttons/CheckOutButton";
-import SimpleButton from "../Buttons/SimpleButton";
+import CheckOutButton from "../common/Buttons/CheckOutButton";
+import SimpleButton from "../common/Buttons/SimpleButton";
 import InputBox from "../common/InputBox/InputBox";
 import { Formik } from "formik";
 import TextArea from "../common/TextArea/TextArea";

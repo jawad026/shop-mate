@@ -1,4 +1,4 @@
-import CheckOutButton from "../Buttons/CheckOutButton";
+import CheckOutButton from "../common/Buttons/CheckOutButton";
 import MyImage from "../../assets/something.gif";
 import Second from "../../assets/step2.png";
 import First from "../../assets/step1.png";
@@ -44,7 +44,7 @@ const InstallationInstruction = () => {
           </div>
         </div>
         <div className="flex justify-center ">
-          <img src={MyImage} alt="Loading..." />
+          <img src={MyImage} alt="Loading.." />
         </div>
       </div>
     </>

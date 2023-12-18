@@ -1,8 +1,9 @@
 import InputBox from "../../components/common/InputBox/InputBox";
-import Button from "../../components/Buttons/CheckOutButton";
+
 import image from "../../assets/logo-full.png";
 import carecartLogo from "../../assets/carecart_logo.png";
 import { useNavigate } from "react-router-dom";
+import CheckOutButton from "../../components/common/Buttons/CheckOutButton";
 const Login = () => {
   const nevigate = useNavigate();
   const handleLogin = () => {
@@ -32,7 +33,7 @@ const Login = () => {
           <p className="md:mb-[5rem] md:pb-3 font-normal text-gray-700 dark:text-gray-400">
             Are you on Shopify?
           </p>
-          <Button text={"Login"} onClick={handleLogin} />
+          <CheckOutButton text={"Login"} onClick={handleLogin} />
         </div>
         <p className="  md:mb-3 font-normal text-gray-700 dark:text-gray-400">
         Start Using ShopMate Today

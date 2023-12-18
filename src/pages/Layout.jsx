@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "../components/Sidebar/Sidebar";
-import Topbar from "../components/Topbar/Topbar";
 import { useState } from "react";
-import MobileSidebar from "../components/Sidebar/MobileSidebar";
+import Sidebar from "../components/common/Sidebar/Sidebar";
+import MobileSidebar from "../components/common/Sidebar/MobileSidebar";
+import Topbar from "../components/common/Topbar/Topbar";
 
 const Layout = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
