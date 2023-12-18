@@ -103,7 +103,7 @@ const BrandSetup = () => {
                           value={values.calloutMessage}
                           onchange={handleChange}
                           name={"calloutMessage"}
-                          maxLength={30}
+                          maxLength={40}
                         />
                       </div>
                     </div>
