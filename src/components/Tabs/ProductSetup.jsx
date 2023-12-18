@@ -1,6 +1,6 @@
-import CheckOutButton from "../Buttons/CheckOutButton";
-import SimpleButton from "../Buttons/SimpleButton";
-import RadioButton from "../Buttons/RadioButton";
+import CheckOutButton from "../common/Buttons/CheckOutButton";
+import SimpleButton from "../common/Buttons/SimpleButton";
+import RadioButton from "../common/Buttons/RadioButton";
 
 const ProductSetup = () => {
   return (

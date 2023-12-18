@@ -1,5 +1,5 @@
-import CheckOutButton from "../Buttons/CheckOutButton";
-import SimpleButton from "../Buttons/SimpleButton";
+import CheckOutButton from "../common/Buttons/CheckOutButton";
+import SimpleButton from "../common/Buttons/SimpleButton";
 
 function MemberShipCard({ onClick, type, text, plan, subscription, icon }) {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import CheckBox from "../Buttons/CheckBox";
+import CheckBox from "../common/Buttons/CheckBox";
 
 function Product() {
   return (

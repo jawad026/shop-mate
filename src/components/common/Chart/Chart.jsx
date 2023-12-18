@@ -35,7 +35,7 @@ const Chart = () => {
   return (
     <>
       {" "}
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-col md:flex-row gap-3">
         <h3 className="text-2xl   font-bold">Last 7 days usage</h3>
         <div className="flex gap-3">
           <InputBox type={'date'}/>

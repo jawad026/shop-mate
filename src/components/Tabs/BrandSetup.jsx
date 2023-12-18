@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import CheckOutButton from "../Buttons/CheckOutButton";
-import SimpleButton from "../Buttons/SimpleButton";
-import ToggleButton from "../Buttons/ToggleButton";
+import CheckOutButton from "../common/Buttons/CheckOutButton";
+import SimpleButton from "../common/Buttons/SimpleButton";
+import ToggleButton from "../common/Buttons/ToggleButton";
 import InputBox from "../common/InputBox/InputBox";
 import SelectBox from "../common/SelectBox/SelectBox";
 import { PiRobotFill } from "react-icons/pi";
