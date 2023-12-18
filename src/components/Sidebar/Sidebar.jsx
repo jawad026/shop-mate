@@ -8,7 +8,7 @@ const Sidebar = () => {
       <div className="flex flex-col gap-3 items-center text-sm">
         <NavLink to={"/shop/home"}>
           <div className="p-5 flex flex-col items-center mt-2">
-            <div className="icon">
+            {/* <div className="icon">
               <svg
                 width="40"
                 height="48"
@@ -45,7 +45,7 @@ const Sidebar = () => {
                   fill="#1996FC"
                 ></path>
               </svg>
-            </div>
+            </div> */}
             <div className="text-black">CareCart</div>
           </div>
         </NavLink>
