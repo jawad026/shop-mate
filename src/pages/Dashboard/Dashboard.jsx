@@ -1,6 +1,6 @@
+import Card from "../../components/common/Card/Card";
 import Chart from "../../components/common/Chart/Chart";
 import TokenUage from "../../components/TokenUsage/TokenUsage";
-import Card from "../../components/Card/Card";
 
 const Dashboard = () => {
   return (
