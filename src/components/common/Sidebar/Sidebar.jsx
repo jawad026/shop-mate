@@ -9,6 +9,7 @@ const Sidebar = () => {
       <div className="flex flex-col gap-3 items-center text-sm">
         <NavLink to={"/shop/home"}>
           <div className="p-5 flex flex-col items-center mt-2">
+
             <img src={MainLogo} alt="" className=" h-[4rem]"/>
             <div className="text-black font-bold mt-[-10px]">ShopMate</div>
           </div>
