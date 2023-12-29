@@ -1,6 +1,6 @@
 import { MdDashboard } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
-import { FaBoxArchive } from "react-icons/fa6";
+import { FaBoxArchive, FaQuestion } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import MainLogo from "../../../assets/main-logo.png";
 const Sidebar = () => {
@@ -36,6 +36,14 @@ const Sidebar = () => {
               <FaBoxArchive size={32} />
             </div>
             <div className="">PRODUCT</div>
+          </div>
+        </NavLink>
+        <NavLink to={"/shop/faq"}>
+          <div className="p-5 flex flex-col items-center active:text-blue-500 hover:text-blue-500 gap-2">
+            <div className="icon">
+              <FaQuestion size={32} />
+            </div>
+            <div className="">FAQ</div>
           </div>
         </NavLink>
       </div>
