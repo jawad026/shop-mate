@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CheckOutButton from "../../components/common/Buttons/CheckOutButton";
 
 function Faq() {
@@ -24,7 +24,7 @@ function Faq() {
 
   return (
     <>
-      <div className="flex justify-end mr-12 mt-6 ">
+      <div className="flex justify-end mr-12 mt-6 py-10">
         {" "}
         <CheckOutButton text={"Save"} />
       </div>
