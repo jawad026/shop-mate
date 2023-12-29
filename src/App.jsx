@@ -6,16 +6,19 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 
 import "./App.css";
 import Login from "./pages/Login/Login";
+import Faq from "./pages/Questions/Faq";
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Login />} />
+        {/* <Route path="/" element={<Login />} />
         <Route path="/shop/*" element={<Layout />}>
           <Route path="home" element={<Dashboard />} />
           <Route path="chatbot" element={<Setting />} />
-          <Route path="order" element={<ProductPage />} />
-        </Route>
+          <Route path="order" element={<ProductPage />} /> */}
+          <Route path="/quest" element={<Faq />} />
+          
+        {/* </Route> */}
       </Routes>
     </>
   );
