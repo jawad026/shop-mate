@@ -45,6 +45,10 @@ function Faq() {
     <form onSubmit={handleSave} >
       <div className=" ml-5 mt-20">
         <h4 className="text-4xl">Frequently Asked Question</h4>
+
+      <div className="flex justify-end mr-12 mt-6 py-10">
+        {" "}
+        <CheckOutButton text={"Save"} />
       </div>
       
         <div className="flex justify-end mt-6 mr-16 py-10">
