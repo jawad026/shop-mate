@@ -4,8 +4,8 @@ import InputBox from "../../components/common/InputBox/InputBox";
 import TextArea from "../../components/common/TextArea/TextArea";
 
 function Faq() {
-  const [inputFields, setInputFields] = useState([""]);// Initial state with one empty input field
-  const [formData, setFormData] = useState([""]); 
+  const [inputFields, setInputFields] = useState([""]); // Initial state with one empty input field
+  const [formData, setFormData] = useState([""]);
   const addInputField = () => {
     if (inputFields.length < 4) {
       setInputFields([...inputFields, ""]);
@@ -30,8 +30,8 @@ function Faq() {
     }
 
     const newFormData = [...formData];
-      newFormData.splice(index, 1);
-      setFormData(newFormData);
+    newFormData.splice(index, 1);
+    setFormData(newFormData);
   };
   const handleSave = (event) => {
     event.preventDefault();
@@ -42,15 +42,10 @@ function Faq() {
 
   return (
     <>
-    <form onSubmit={handleSave} >
-      <div className=" ml-5 mt-20">
-        <h4 className="text-4xl">Frequently Asked Question</h4>
-
-      <div className="flex justify-end mr-12 mt-6 py-10">
-        {" "}
-        <CheckOutButton text={"Save"} />
-      </div>
-      
+      <form onSubmit={handleSave}>
+        <div className=" ml-5 mt-20">
+          <h4 className="text-4xl">Frequently Asked Question</h4>
+        </div>
         <div className="flex justify-end mt-6 mr-16 py-10">
           <CheckOutButton text={"Save"} />
         </div>
