@@ -53,14 +53,14 @@ function Faq() {
           <div className="flex flex-col items-center mt-12  h-96  ">
             <div className=" flex">
               <div className="md:w-[900px]">
-                <TextArea
-                  maxLength={400}
+                <InputBox
+                  maxLength={40}
                   type="text"
                   value={inputFields[0]}
-                  onChange={(e) => handleInputChange(0, e.target.value)}
+                  onchange={(e) => handleInputChange(0, e.target.value)}
                 />
               </div>
-              <div className="ml-8 mt-4 ">
+              <div className="ml-8 mt-1 ">
                 <CheckOutButton onClick={addInputField} text={"+"} />
               </div>
             </div>
@@ -68,16 +68,16 @@ function Faq() {
               {inputFields.slice(1).map((value, index) => (
                 <div className="flex mt-2" key={index}>
                   <div className=" md:w-[900px]">
-                    <TextArea
-                      maxLength={400}
+                    <InputBox
+                      maxLength={40}
                       type="text"
                       value={value}
-                      onChange={(e) =>
+                      onchange={(e) =>
                         handleInputChange(index + 1, e.target.value)
                       }
                     />
                   </div>
-                  <div className="ml-8 mt-4">
+                  <div className="ml-8 mt-1">
                     <CheckOutButton
                       onClick={() => removeInputField(index + 1)}
                       text={"–"}
