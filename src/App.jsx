@@ -6,7 +6,7 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 
 import "./App.css";
 import Login from "./pages/Login/Login";
-import Faq from "./pages/Questions/Faq";
+
 function App() {
   return (
     <>
@@ -16,7 +16,6 @@ function App() {
           <Route path="home" element={<Dashboard />} />
           <Route path="chatbot" element={<Setting />} />
           <Route path="order" element={<ProductPage />} />
-          <Route path="faq" element={<Faq />} />
         </Route>
       </Routes>
     </>

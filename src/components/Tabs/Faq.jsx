@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CheckOutButton from "../../components/common/Buttons/CheckOutButton";
 import InputBox from "../../components/common/InputBox/InputBox";
-import TextArea from "../../components/common/TextArea/TextArea";
+import SimpleButton from "../common/Buttons/SimpleButton";
 
 function Faq() {
   const [inputFields, setInputFields] = useState([""]); // Initial state with one empty input field
@@ -43,45 +43,47 @@ function Faq() {
   return (
     <>
       <form onSubmit={handleSave}>
-        <div className=" ml-5 mt-20">
-          <h4 className="text-4xl">Frequently Asked Question</h4>
+        <div className="flex px-4 gap-3 justify-end py-6">
+          <SimpleButton text={"Reset"} type="button" />
+          <CheckOutButton type="submit" text={"Save Changes"} />
         </div>
-        <div className="flex justify-end mt-6 mr-16 py-10">
-          <CheckOutButton text={"Save"} />
-        </div>
-        <div className="shadow-xl border rounded-md border-color: black-800 md:mx-16 ">
+        <div className="shadow-xl border rounded-lg border-color: black-800 md:mx-16 ">
           <div className="flex flex-col items-center mt-12  h-96  ">
-            <div className=" flex">
+              {" "}
+            <div className="flex items-center">
               <div className="md:w-[900px]">
-                <InputBox
+              <h1 className="text-start">Question {1}     <InputBox
                   maxLength={40}
                   type="text"
                   value={inputFields[0]}
                   onchange={(e) => handleInputChange(0, e.target.value)}
-                />
+                /></h1>   
               </div>
-              <div className="ml-8 mt-1 ">
+              <div className="ml-8 mt-5 ">
                 <CheckOutButton onClick={addInputField} text={"+"} />
               </div>
             </div>
             <div>
               {inputFields.slice(1).map((value, index) => (
-                <div className="flex mt-2" key={index}>
-                  <div className=" md:w-[900px]">
-                    <InputBox
-                      maxLength={40}
-                      type="text"
-                      value={value}
-                      onchange={(e) =>
-                        handleInputChange(index + 1, e.target.value)
-                      }
-                    />
-                  </div>
-                  <div className="ml-8 mt-1">
-                    <CheckOutButton
-                      onClick={() => removeInputField(index + 1)}
-                      text={"–"}
-                    />
+                <div key={index}>
+                  <h1>Question {index + 2} </h1>{" "}
+                  <div className="flex mt-2" key={index}>
+                    <div className=" md:w-[900px]">
+                      <InputBox
+                        maxLength={40}
+                        type="text"
+                        value={value}
+                        onchange={(e) =>
+                          handleInputChange(index + 1, e.target.value)
+                        }
+                      />
+                    </div>
+                    <div className="ml-8 mt-1">
+                      <CheckOutButton
+                        onClick={() => removeInputField(index + 1)}
+                        text={"–"}
+                      />
+                    </div>
                   </div>
                 </div>
               ))}
